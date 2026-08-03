@@ -13,12 +13,13 @@
 
 #header {
     --header-gradient-bar: linear-gradient(120deg, rgba(var(--basalt-bright-element-color), var(--header-border-gradient-opacity)), rgba(var(--basalt-polished-color), var(--header-border-gradient-opacity)));
+    --header-gradient-background: linear-gradient(to top, rgba(var(--header-background-color), calc(var(--header-bg-gradient-opacity) - 0.3)) 0%, rgba(var(--header-background-color), var(--header-bg-gradient-opacity)) 25%, rgba(var(--header-background-color), calc(var(--header-bg-gradient-opacity) + 0.4)) 100%);
 
-    --header-bg-gradient-opacity: 0;
+    --header-bg-gradient-opacity: -10086;
     --header-border-gradient-opacity: 0;
     --header-bg-blur: 0px;
     top: 0;
-    background: rgba(var(--header-background-color), var(--header-bg-gradient-opacity));
+    background: var(--header-gradient-background);
     border-bottom: 0.25rem solid;
     backdrop-filter: blur(var(--header-bg-blur));
     border-image: var(--header-gradient-bar) 1;
@@ -26,8 +27,8 @@
 }
 
 #header :is(#login-status, .open-menu) {
-    background: rgba(var(--basalt-tertiary-color), calc(0.85 - var(--header-bg-gradient-opacity)));
-    backdrop-filter: blur(calc(10px - var(--header-bg-blur)));
+    background: rgba(var(--basalt-tertiary-color), 0.85);
+    
     transition: .5s ease-out 1.5s allow-discrete;
 }
 
@@ -40,6 +41,7 @@
 
 #header:is(:focus, :focus-within, :hover) {
     --header-gradient-bar: linear-gradient(120deg, rgba(var(--basalt-bright-element-color), var(--header-border-gradient-opacity)), rgba(var(--basalt-polished-color), var(--header-border-gradient-opacity)));
+    --header-gradient-background: linear-gradient(to top, rgba(var(--header-background-color), calc(var(--header-bg-gradient-opacity) - 0.3)) 0%, rgba(var(--header-background-color), var(--header-bg-gradient-opacity)) 25%, rgba(var(--header-background-color), calc(var(--header-bg-gradient-opacity) + 0.4)) 100%);
 
     --header-bg-gradient-opacity: 0.55;
     --header-border-gradient-opacity: 0.85;
@@ -55,9 +57,7 @@
 }
 
 #header:is(:focus, :focus-within, :hover) :is(#login-status, .open-menu) {
-    background: none;
-    backdrop-filter: none;
-    box-shadow: none;
+    background: rgba(var(--baalt-tertiary-color), 0);
     transition: .35s ease-out .375s allow-discrete;
 }
 
