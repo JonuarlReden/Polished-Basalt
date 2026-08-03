@@ -1,0 +1,477 @@
+/*
+ * ==============
+ * 增添与自建内容
+ * ==============
+ */
+
+/* BUG修复与小修补 */
+
+#top-bar div[class*=top-bar]>ul>li>a {
+    font-size: 1.25em;
+}
+
+.fnnum {
+    margin-right: -0.05rem;
+}
+
+div.list-ungap ul > li {
+    margin: auto;
+}
+
+.collapsible-block-content {
+    width: 100vw;
+}
+
+:is(span.specialtext, span.st) {
+    text-decoration: underline 2px;
+    text-underline-offset: 3px;
+}
+
+div.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    flex-wrap: wrap; /* 超出自动换行 */
+}
+
+:is(#u-credit-view,#u-credit-otherwise) .modalcontainer {
+    height: stretch;
+    margin: auto;
+    display: flex;
+}
+
+div.creditButtonStandalone > p {
+    width: var(--rate-module-button-size);
+    height: var(--rate-module-button-size);
+}
+
+div.creditButtonStandalone > p > a {
+    width: 100%;
+    height: 100%;
+    margin: inherit;
+}
+
+.footnotes-footer .title {
+    font-size: initial; 
+}
+
+@media only screen and (max-width: 1279px) {
+    .fncon {
+        left: 11%;
+    }
+}
+
+/* ACS组件配色与染色优化 */
+
+.polished-acs {
+    --one-color: 20, 120, 41;
+    --two-color: 127, 173, 33;
+    --three-color: 176, 155, 11;
+    --four-color: 219, 86, 13;
+    --five-color: 142, 19, 40;
+    --six-color: 87, 60, 195;
+}
+
+.polished-acs .table3 {
+    --basalt-th-text-color: var(--basalt-light-text-color);
+}
+
+span:is(.st, .specialtext)[class^="table"] {
+    color: rgb(var(--basalt-th-background-color));
+}
+
+/* 更多和可自定义的备忘   */
+/* 包括更好的部门模板定义 */
+
+div[class$="memo"] {
+    --memo-heading: "基金会提示";
+    --memo-logo: url(https://scpsandboxcn.wikidot.com/local--files/jr-reboot/SCP_Foundation_Edit.svg);
+    --memo-color: var(--basalt-tertiary-color);
+    --memo-alpha: 0.9;
+    background: linear-gradient(rgba(var(--memo-color), var(--memo-alpha)), rgba(var(--memo-color), var(--memo-alpha))), var(--memo-logo) rgba(var(--memo-color), calc(1 - var(--memo-alpha)));
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 4rem;
+    margin-inline: auto;
+    margin-block: 2rem;
+    padding-inline: 20px;
+    padding-block: 10px;
+    border: solid 2px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+div[class$="memo"]::before {
+    content: var(--memo-heading);
+    font-family: var(--UI-font);
+    font-weight: 900;
+    font-size: 1.3em;
+    text-align: center;
+    margin: 0 auto 1rem auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.5em;
+}
+
+/* 下面这些是用来重新定义已有的memo的 */
+
+div[class^="raisa"][class$="memo"] {
+    --memo-heading: "来自记录与信息安全管理部的通知";
+    --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/RAISA_LIGHTLOGO.png);
+    --memo-color: 255, 243, 173;
+    --memo-alpha: 0;
+}
+
+div[class^="classification"][class$="memo"] {
+    --memo-heading: "分级委员会备忘录";
+    --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/CLASSIFICATION_LIGHTLOGO.png);
+    --memo-color: 237, 245, 243;
+    --memo-alpha: 0;
+}
+
+div[class^="ettra"][class$="memo"] {
+    --memo-heading: "来自潜在威胁战术响应局的通知";
+    --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/ETTRA_LIGHTLOGO.png);
+    --memo-color: 245, 215, 215;
+    --memo-alpha: 0;
+}
+
+div[class^="ethics"][class$="memo"] {
+    --memo-heading: "伦理委员会备忘录";
+    --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/ETHICS_LIGHTLOGO.png);
+    --memo-color: 255, 219, 196;
+    --memo-alpha: 0;
+}
+
+div[class^="temporal"][class$="memo"] {
+    --memo-heading: "时间异常部门";
+    --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/DELTA_T_LIGHTLOGO.png);
+    --memo-color: 255, 255, 255;
+    --memo-alpha: 0;
+}
+
+div[class^="overwatch"][class$="memo"] {
+    --memo-heading: "监督者指挥部";
+    --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/O5_LIGHTLOGO.png);
+    --memo-color: 227, 227, 227;
+    --memo-alpha: 0;
+}
+
+div[class^="miscomm"][class$="memo"] {
+    --memo-heading: "来自误传部门的通知";
+    --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/MISCOMM_LIGHTLOGO.png);
+    --memo-color: 238, 237, 250;
+    --memo-alpha: 0;
+}
+
+/* 上面这些是用来重新定义已有的memo的 */
+
+div[class^="antimeme"][class$="memo"] {
+    --memo-heading: "这里没有逆模因部的通知";
+    --memo-color: 188, 191, 206;
+    --memo-alpha: 0.9;
+    --memo-logo: url(https://scp-wiki.wdfiles.com/local--files/departments/antimemetics-division.png);
+    opacity: 0;
+    transition-duration: 2s;
+    transition-timing-function: ease-in;
+}
+
+div[class^="antimeme"][class$="memo"]:hover {
+    opacity: 100
+}
+
+div[class^="surreal"][class$="memo"] {
+    --memo-heading: "超现实部有废话要对你说！";
+    --memo-logo: url(https://scp-wiki.wdfiles.com/local--files/departments/surrealistics.png);
+    --memo-color: 196, 233, 229;
+    --memo-alpha: 0.9;
+}
+
+div[class^="unreal"][class$="memo"] {
+    --memo-heading: "[通知标题]";
+    --memo-logo: url(http://scp-wiki.wikidot.com/local--files/unreality-hub/Unreality%20Header%20Logo.svg);
+    --memo-color: 255, 255, 255;
+    --memo-alpha: 0.9;
+}
+
+div[class^="it"][class$="memo"] {
+    --memo-heading: "SCiPNET公告";
+    --memo-logo: url(https://scpsandboxcn.wikidot.com/local--files/jr-reboot/SCiPNET.svg);
+    --memo-color: 184, 224, 251;
+    --memo-alpha: 0.9;
+}
+
+div[class^="aiad"][class$="memo"] {
+    --memo-heading: "SCiPNET.aic公告";
+    --memo-logo: linear-gradient(rgba(var(--memo-color), 0.7), rgba(var(--memo-color), 0.7)), url(https://scpsandboxcn.wikidot.com/local--files/jr-reboot/AIAD.svg);
+    --memo-color: 240, 176, 183;
+    --memo-alpha: 0;
+    color: #8A0242;
+    border: solid 2px rgba(0, 0, 0, 0.5);
+    filter: invert(1);
+}
+
+div[class^="aiad"][class$="memo"]::before {
+    color: #8A0242;
+}
+
+div[class^="admin"] {
+    --memo-heading: "来自SCP基金会管理员的指令";
+    --memo-logo: url(https://scpsandboxcn.wikidot.com/local--files/jr-reboot/Administrator-JR-Speciallized-Colored.svg);
+    --memo-color: 223, 176, 241;
+    --memo-alpha: 0.9;
+}
+
+:root {
+    --deletion-backdrop: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 304 304' width='304' height='304'%3E%3Cpath fill='%23d9d9d9' fill-opacity='0.35' d='M44.1 224a5 5 0 1 1 0 2H0v-2h44.1zm160 48a5 5 0 1 1 0 2H82v-2h122.1zm57.8-46a5 5 0 1 1 0-2H304v2h-42.1zm0 16a5 5 0 1 1 0-2H304v2h-42.1zm6.2-114a5 5 0 1 1 0 2h-86.2a5 5 0 1 1 0-2h86.2zm-256-48a5 5 0 1 1 0 2H0v-2h12.1zm185.8 34a5 5 0 1 1 0-2h86.2a5 5 0 1 1 0 2h-86.2zM258 12.1a5 5 0 1 1-2 0V0h2v12.1zm-64 208a5 5 0 1 1-2 0v-54.2a5 5 0 1 1 2 0v54.2zm48-198.2V80h62v2h-64V21.9a5 5 0 1 1 2 0zm16 16V64h46v2h-48V37.9a5 5 0 1 1 2 0zm-128 96V208h16v12.1a5 5 0 1 1-2 0V210h-16v-76.1a5 5 0 1 1 2 0zm-5.9-21.9a5 5 0 1 1 0 2H114v48H85.9a5 5 0 1 1 0-2H112v-48h12.1zm-6.2 130a5 5 0 1 1 0-2H176v-74.1a5 5 0 1 1 2 0V242h-60.1zm-16-64a5 5 0 1 1 0-2H114v48h10.1a5 5 0 1 1 0 2H112v-48h-10.1zM66 284.1a5 5 0 1 1-2 0V274H50v30h-2v-32h18v12.1zM236.1 176a5 5 0 1 1 0 2H226v94h48v32h-2v-30h-48v-98h12.1zm25.8-30a5 5 0 1 1 0-2H274v44.1a5 5 0 1 1-2 0V146h-10.1zm-64 96a5 5 0 1 1 0-2H208v-80h16v-14h-42.1a5 5 0 1 1 0-2H226v18h-16v80h-12.1zm86.2-210a5 5 0 1 1 0 2H272V0h2v32h10.1zM98 101.9V146H53.9a5 5 0 1 1 0-2H96v-42.1a5 5 0 1 1 2 0zM53.9 34a5 5 0 1 1 0-2H80V0h2v34H53.9zm60.1 3.9V66H82v64H69.9a5 5 0 1 1 0-2H80V64h32V37.9a5 5 0 1 1 2 0zM101.9 82a5 5 0 1 1 0-2H128V37.9a5 5 0 1 1 2 0V82h-28.1zm16-64a5 5 0 1 1 0-2H146v44.1a5 5 0 1 1-2 0V18h-26.1zm102.2 270a5 5 0 1 1 0 2H98v14h-2v-16h124.1zM242 149.9V160h16v34h-16v62h48v48h-2v-46h-48v-66h16v-30h-16v-12.1a5 5 0 1 1 2 0zM53.9 18a5 5 0 1 1 0-2H64V2H48V0h18v18H53.9zm112 32a5 5 0 1 1 0-2H192V0h50v2h-48v48h-28.1zm-48-48a5 5 0 0 1-9.8-2h2.07a3 3 0 1 0 5.66 0H178v34h-18V21.9a5 5 0 1 1 2 0V32h14V2h-58.1zm0 96a5 5 0 1 1 0-2H137l32-32h39V21.9a5 5 0 1 1 2 0V66h-40.17l-32 32H117.9zm28.1 90.1a5 5 0 1 1-2 0v-76.51L175.59 80H224V21.9a5 5 0 1 1 2 0V82h-49.59L146 112.41v75.69zm16 32a5 5 0 1 1-2 0v-99.51L184.59 96H300.1a5 5 0 0 1 3.9-3.9v2.07a3 3 0 0 0 0 5.66v2.07a5 5 0 0 1-3.9-3.9H185.41L162 121.41v98.69zm-144-64a5 5 0 1 1-2 0v-3.51l48-48V48h32V0h2v50H66v55.41l-48 48v2.69zM50 53.9v43.51l-48 48V208h26.1a5 5 0 1 1 0 2H0v-65.41l48-48V53.9a5 5 0 1 1 2 0zm-16 16V89.41l-34 34v-2.82l32-32V69.9a5 5 0 1 1 2 0zM12.1 32a5 5 0 1 1 0 2H9.41L0 43.41V40.6L8.59 32h3.51zm265.8 18a5 5 0 1 1 0-2h18.69l7.41-7.41v2.82L297.41 50H277.9zm-16 160a5 5 0 1 1 0-2H288v-71.41l16-16v2.82l-14 14V210h-28.1zm-208 32a5 5 0 1 1 0-2H64v-22.59L40.59 194H21.9a5 5 0 1 1 0-2H41.41L66 216.59V242H53.9zm150.2 14a5 5 0 1 1 0 2H96v-56.6L56.6 162H37.9a5 5 0 1 1 0-2h19.5L98 200.6V256h106.1zm-150.2 2a5 5 0 1 1 0-2H80v-46.59L48.59 178H21.9a5 5 0 1 1 0-2H49.41L82 208.59V258H53.9zM34 39.8v1.61L9.41 66H0v-2h8.59L32 40.59V0h2v39.8zM2 300.1a5 5 0 0 1 3.9 3.9H3.83A3 3 0 0 0 0 302.17V256h18v48h-2v-46H2v42.1zM34 241v63h-2v-62H0v-2h34v1zM17 18H0v-2h16V0h2v18h-1zm273-2h14v2h-16V0h2v16zm-32 273v15h-2v-14h-14v14h-2v-16h18v1zM0 92.1A5.02 5.02 0 0 1 6 97a5 5 0 0 1-6 4.9v-2.07a3 3 0 1 0 0-5.66V92.1zM80 272h2v32h-2v-32zm37.9 32h-2.07a3 3 0 0 0-5.66 0h-2.07a5 5 0 0 1 9.8 0zM5.9 0A5.02 5.02 0 0 1 0 5.9V3.83A3 3 0 0 0 3.83 0H5.9zm294.2 0h2.07A3 3 0 0 0 304 3.83V5.9a5 5 0 0 1-3.9-5.9zm3.9 300.1v2.07a3 3 0 0 0-1.83 1.83h-2.07a5 5 0 0 1 3.9-3.9zM97 100a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-48 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 96a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-144a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-96 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm96 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-32 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM49 36a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-32 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM33 68a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 240a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm80-176a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm112 176a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 180a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 84a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+div[class^="deletion"] {
+    --memo-heading: "删　除　部　门";
+    --memo-logo: linear-gradient(rgba(var(--memo-color), 0.6), rgba(var(--memo-color), 0.6)), url(https://scp-wiki.wdfiles.com/local--files/scp-6768/dept.png);
+    --memo-color: 0, 0, 0;
+    --memo-alpha: 0;
+    border: solid 2px #f0943e;
+    color: #ffffff;
+    background: var(--deletion-backdrop), linear-gradient(rgba(var(--memo-color), var(--memo-alpha)), rgba(var(--memo-color), var(--memo-alpha))), var(--memo-logo) rgba(var(--memo-color), calc(1 - var(--memo-alpha)));
+    background-size: 25%, contain;
+    background-position: center center;
+    background-repeat: repeat, no-repeat;
+}
+
+div[class^="deletion"]::before {
+    color: #ffffff;
+}
+
+/*
+列表项美化
+*/
+
+#page-content ul:not([class^="yui"]) li,
+#page-content ol:not([class^="yui"]) li {
+    margin: calc(var(--main-content-top-margin) - 1rem) auto calc(var(--main-content-bottom-margin) - 1rem);
+}
+
+#page-content :is(li)[class="none"] > li {
+    margin-left: 0.15rem;
+}
+
+#page-content ul[class="none"] li {
+    list-style-type: disc;
+}
+
+#page-content ul[class="none"] li li {
+    list-style-type: circle;
+}
+
+#page-content ul[class="none"] li li li {
+    list-style-type: square;
+}
+
+#page-content ol[class="none"] li {
+    list-style-type: decimal;
+}
+
+#page-content ol[class="none"] li li {
+    list-style-type: lower-roman;
+}
+
+#page-content ol[class="none"] li li li {
+    list-style-type: lower-alpha;
+}
+
+/* 高级折叠块 */
+
+div.col-info .collapsible-block-unfolded {
+    display: flex;
+    width: 100%;
+}
+
+div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link) {
+    position: relative;
+    z-index: 5;
+}
+
+div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link) a {
+    font-family: var(--UI-font);
+    font-weight: bold;
+    font-size: 1.125em;
+    padding: 0.25em 0.5em 0 0.5em;
+    margin-top: 0.25rem;
+    border-bottom: solid .5rem rgb(var(--basalt-undertone));
+    position: relative;
+    transition: border-bottom var(--header-link-transition-1st);
+}
+
+div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link) a:is(:hover, :focus) {
+    text-decoration: none;
+    color: rgb(var(--top-bar-link-color-hover));
+    border-bottom: solid .5rem rgb(var(--basalt-sub-text-color));
+    transition: color var(--header-link-transition-1st), border-bottom-color var(--header-link-transition-2nd);
+}
+
+div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link) a:is(:hover, :focus)::before,
+div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link) a:is(:hover, :focus)::after {
+    height: 100%;
+}
+
+div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link) a::before,
+div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link) a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    z-index: -1;
+}
+
+div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link) a::before {
+    background-color: rgb(var(--top-bar-link-background-hover-alt));
+    transition: height var(--header-link-transition-2nd);
+}
+
+div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link) a:is(:hover, :focus)::before {
+    transition: height var(--header-link-transition-1st);
+}
+
+div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link) a::after {
+    background-color: rgb(var(--top-bar-link-background-hover));
+    transition: height var(--header-link-transition-1st);
+}
+
+div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link) a:is(:hover, :focus)::after {
+    transition: height var(--header-link-transition-2nd);
+}
+
+div.span-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* 超出自动换行 */
+}
+div.span-row > p {
+    text-align: center;
+    margin: 0;
+}
+div.span-row p:first-child {
+    text-align: left;
+    flex: 1;
+}
+div.span-row p:last-child {
+    text-align: right;
+    flex: 1;
+}
+
+/* 邮件 */
+
+div.mailbox {
+    display: block;
+    margin: 1.75rem auto;
+    padding: .5rem 1.5rem;
+    box-sizing: border-box;
+    background: rgb(var(--basalt-secondary-color));
+    border-top: double .5rem rgb(var(--basalt-polished-color));
+    border-bottom: solid .25rem rgb(var(--basalt-tertiary-color));
+}
+
+#page-content div.mailbox {
+    max-width: calc(var(--main-content-width) * 0.75);
+}
+
+div.mailbox > div.info {
+    padding: 0.1rem 0.5rem;
+    border-left: solid 0.25rem rgb(var(--mailinfo-color));
+    margin-left: 0.25rem;
+    background: rgba(var(--mailinfo-color), 0.2);
+}
+
+div.mailbox > div.tail{
+    padding: 0.3rem 0.5rem 0.25rem 0.75rem;
+    border-top: dashed 0.25rem rgb(var(--basalt-undertone));
+    background: rgba(var(--basalt-undertone), 0.2);
+    margin-bottom: 0.5rem;
+}
+
+div.mailbox > div.info > hr, div.mailbox > div.tail > hr {
+    margin-left: 0;
+    background-color: rgb(var(--basalt-dark-element-color));
+}
+
+#page-content div.list-ungap ul > li,
+#page-content div.list-ungap  ol > li {
+    margin: auto;
+}
+
+/* 快速对话气泡 */
+
+div.call {
+    width: fit-content;
+    max-width: 55% !important;
+    padding: 0.25rem 1rem;
+    margin: 0.5rem 0;
+    border-radius: 1rem;
+}
+
+div.call.aic{
+    background: rgb(var(--basalt-dark-element-color));
+    color: rgb(var(--basalt-secondary-color));
+    border-bottom-left-radius: 0;
+    margin-right: auto;
+}
+
+div.call.jr {
+    background: rgb(var(--basalt-bright-element-color));
+    color: rgb(var(--basalt-secondary-color));
+    border-bottom-right-radius: 0;
+    margin-left: auto;
+}
+
+div.call span.fnnum::after {
+    color: rgb(var(--basalt-secondary-color))
+}
+
+div.call span.fnnum:hover {
+    background-color: rgb(var(--basalt-secondary-color))
+}
+
+div.call span.fnnum:hover::after {
+    color: var(--fnColor)
+}
+
+div.call span.fncon {
+    color: rgb(var(--basalt-main-text-color))
+}
+
+/* 杂项 */
+
+div.block-central,
+div.block-central .collapsible-block-unfolded {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+:is(:where(#page-content) table:not(.form),table.wiki-content-table).no-border td {
+    border: none;
+}
+
+:is(:where(#page-content) table:not(.form),table.wiki-content-table).content-central td {
+    text-align: center;
+}
+
+/* 字体选用 */
+
+.serif {
+    font-family: var(--serif-font);
+}
+
+.mono {
+    font-family: var(--mono-font);
+}
+
+.fnnum {
+    margin-right: -0.05rem;
+}

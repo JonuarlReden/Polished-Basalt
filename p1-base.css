@@ -1,0 +1,77 @@
+/*
+ * ==================================================================================
+ * Polished Basalt - Developed and maintained by Jonuarl Reden
+ * special thanks to OxygenNine and Hormress
+ * based on Basalt-Bedrock by Placeholder MCD, Liryn and EstrellaYoshte (for Bedrock)
+ * 
+ * ALL CODE IS LICENSED UNDER CC-BY-SA 4.0 INTERNATIONAL
+ * ----------------------------------------------------------------------------------
+ * 磨制玄武岩 - 由林枫晨 / Jonuarl Reden 开发与维护
+ * O9和吼姆是神……
+ * 本版式基于由 Placeholder MCD， Liryn 和 EstrellaYoshte （仅基岩）共同开发的玄武岩-基岩体系
+ * 
+ * 所有代码均基于 CC-BY-SA 4.0 国际版授权协议公开
+ * ==================================================================================
+ * 页眉字体与用户界面字体为 Sofia Sans / Empo Sans（中日韩文字）。
+ * 正文字体为 Inter / 思源黑体。
+ * 等宽字体为 JetBrains Mono / Maple Mono（中日韩文字）。
+ * 衬线字体为 Domine / 思源宋体。
+ * 所有字体均采用OTL（开放字体协议）。
+ * 特别感谢 zeoseven 在中文互联网字体资源领域的开拓、积累和贡献！
+ * 
+ */
+
+/*
+ *
+ * ======================================
+ * 第一阶段 / Milestone 1
+ * !!!!尚未正式发布，不建议强行将其投入使用!!!!
+ * ======================================
+ *
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Domine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+CJK+SC:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+CJK+SC:wght@200..900&display=swap');
+@import url("https://fontsapi.zeoseven.com/442/main/result.css");
+@import url("https://fontsapi.zeoseven.com/8/main/result.css");
+
+:root {
+    --rate-module-info-icon-color: var(--basalt-undertone);
+    --rate-module-info-background-color: var(--basalt-tertiary-color);
+
+    --basalt-primary-color: 254, 254, 254;
+    --basalt-secondary-color: 247, 248, 250;
+    --basalt-tertiary-color: 218, 219, 222;
+    --basalt-main-text-color: 20, 20, 20;
+    --basalt-overtone: 50, 50, 50;
+    --basalt-undertone: 61, 71, 202;
+ 
+    --basalt-bright-element-color: 16, 76, 184;
+    --basalt-dark-element-color: 18, 20, 150;
+    --basalt-alternate-color: 255, 132, 0;
+    --basalt-positive-color: 24, 163, 20;
+    --basalt-negative-color: 255, 48, 48;
+    --basalt-cancel-color: var(--basalt-negative-color);
+    --basalt-sub-text-color: 155, 154, 162;
+    --basalt-light-text-color: var(--basalt-primary-color);
+ 
+    --basalt-UI-dark-palette: var(--basalt-overtone);
+    --basalt-focus-color: var(--basalt-undertone);
+    --basalt-background-color: var(--basalt-primary-color);
+
+    --window-border-radius: 0;
+
+    --basalt-polished-color: 0, 163, 255;
+    --mailinfo-color: var(--basalt-alternate-color);
+    --basalt-focus-color: var(--basalt-polished-color);
+
+    --serif-font: var(--serif-font-primary), serif;
+    --serif-font-primary: Domine, "Noto Serif SC", "Noto Serif CJK SC";
+    --mono-font-primary: "JetBrains Mono", "Maple Mono NF CN";
+    --UI-font-primary: "Sofia Sans", "Empo Sans 1";
+
+    --header-gradient-bar: linear-gradient(120deg, rgb(var(--basalt-bright-element-color)), rgb(var(--basalt-polished-color)));
+}

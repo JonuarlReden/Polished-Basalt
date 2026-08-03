@@ -1,0 +1,29 @@
+/*
+ * ==========
+ * 平行样式版头
+ * ==========
+ */
+
+:root{
+    --header-logo-mask: linear-gradient(105deg, #000 0%, #000 40%, #0005 40%, #0005 65%, #0001 65%);
+    --header-logo-mask-size: cover;
+    --header-logo-mask-position: center;
+    --header-logo-right-margin: calc(var(--base-header-height) * -0.35);
+}
+
+#header h1 a::before {
+    mask-image: var(--header-logo-mask);
+    mask-size: var(--header-logo-mask-size);
+    mask-position: var(--header-logo-mask-position);
+    mask-repeat: no-repeat;
+    -webkit-mask-image: var(--header-logo-mask);
+    -webkit-mask-size: var(--header-logo-mask-size);
+    -webkit-mask-position: var(--header-logo-mask-position);
+    -webkit-mask-repeat: no-repeat;
+    margin-right: var(--header-logo-right-margin);
+}
+
+#header h1 a span::before {
+    padding-left: 0.5rem;
+    font-weight: 700;
+}

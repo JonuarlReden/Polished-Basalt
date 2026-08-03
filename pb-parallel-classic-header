@@ -1,0 +1,83 @@
+/*
+ * ==========
+ * 平行样式版头
+ * 经典模式
+ * ==========
+ */
+
+/* !!需结合原组件使用!! */
+
+:root {
+    --title-size: 2.25rem;
+    --subtitle-size: 1rem;
+    --base-border-width: 0.2rem;
+
+    --header-title-height: 3.5rem;
+
+    --header-button-size: 2.5rem;
+    --login-status-box-size: 2rem;
+    --login-status-box-height: var(--login-status-box-size);
+    --login-status-box-width: calc(2 * var(--login-status-box-size));
+    --login-status-button-width: var(--login-status-box-size);
+    --user-button-width: var(--header-button-size);
+    --side-bar-button-width: var(--header-button-size);
+    --side-bar-button-height: var(--side-bar-button-width);
+    --header-final-height: calc(var(--header-title-height) + 2 * var(--header-button-size));
+
+    --top-bar-gradient: var(--header-gradient);
+    --top-bar-border-width: var(--base-border-width);
+    --top-bar-border-color: var(--basalt-undertone);
+
+    --set-safari-mode-disabled: set;
+}
+
+#header-extra-div-3 {
+    box-shadow: none !important;
+}
+
+div#header-extra-div-3::before {
+    content: "";
+    width: 100%;
+    height: 0.2rem;
+    left: 0;
+    position: absolute;
+    background-image: linear-gradient(to right, transparent 0, transparent calc((100vw - var(--main-content-width)) / 2 - 10%), rgba(var(--basalt-undertone), 0.5) calc((100vw - var(--main-content-width)) / 2), rgba(var(--basalt-undertone), 0.9), rgba(var(--basalt-undertone), 0.5) calc((100vw + var(--main-content-width)) / 2), transparent calc((100vw + var(--main-content-width)) / 2 + 10%));
+}
+
+#login-status {
+    background-color: rgb(var(--basalt-teritary-color));
+    box-shadow: 6px 3px rgb(var(--basalt-bright-element-color));
+}
+
+#login-status span.printuser > a img {
+    border-bottom: 0.25rem solid;
+    border-bottom-color: rgb(var(--basalt-polished-color));
+}
+
+#login-status span.printuser:is(:hover, :focus, :focus-within, :target) > a img {
+    border-bottom-color: rgb(var(--basalt-tertiary-color));
+}
+
+/* {$centered}/
+
+#header h1 a::before {
+    opacity: 0.2;
+}
+
+/{$centered} */
+
+/* {$retro}/
+
+:root {
+    --header-title-height: 5.5rem;
+}
+
+#top-bar div[class*="top-bar"] > ul > li {
+    flex-grow: 0.075;
+}
+
+#top-bar div[class*="top-bar"] > ul {
+    justify-content: end;
+}
+
+/{$retro} */

@@ -1,0 +1,679 @@
+/* 
+ * ======================
+ * 伪元素本地化文本
+ * original from Peroxide
+ * ======================
+ */
+
+/* 需注意，脚注块标题翻译部分与原始版本相比有所微调 */
+
+/* Action Area - Close Button */
+
+:root {
+    --LOC-close: 'Close';
+}
+
+:root:lang(cn) {
+    --LOC-close: '关闭';
+}
+
+:root:lang(ja) {
+    --LOC-close: '閉じる';
+}
+
+/* Action Area - File Types */
+
+:root {
+    --LOC-file-type-svg: 'SVG Vector Graphics';
+    --LOC-file-type-png: 'PNG Image';
+    --LOC-file-type-jpeg: 'JPEG Image';
+    --LOC-file-type-gif: 'GIF Animated Image';
+    --LOC-file-type-bmp: 'BMP Image';
+    --LOC-file-type-truetype: 'TrueType Font File';
+    --LOC-file-type-opentype: 'OpenType Font File';
+    --LOC-file-type-woff: 'WOFF Font File';
+    --LOC-file-type-woff2: 'WOFF2 Font File';
+    --LOC-file-type-ascii: 'Other Files';
+    --LOC-file-type-pdf: 'PDF Document';
+    --LOC-file-type-7zip: '7-Zip Compressed File';
+    --LOC-file-type-zip: 'ZIP Compressed File';
+    --LOC-file-type-rar: 'RAR Compressed File';
+    --LOC-file-type-powerpoint: 'PowerPoint Presentation';
+    --LOC-file-type-excel: 'Excel Spreadsheet';
+    --LOC-file-type-word: 'Word Document';
+    --LOC-file-type-access: 'Access Database';
+    --LOC-file-type-obj: '3D Object File';
+    --LOC-file-type-txt: 'Plain Text';
+    --LOC-file-type-js: 'JavaScript Code';
+    --LOC-file-type-css: 'CSS Cascading Style Sheet';
+    --LOC-file-type-html: 'HTML Web Page';
+    --LOC-file-type-xml: 'XML Document';
+    --LOC-file-type-exe: 'Executable File';
+    --LOC-manage-attachments: 'Manage Attachments';
+}
+
+:root:lang(cn) {
+    --LOC-file-type-svg: 'SVG 矢量图形';
+    --LOC-file-type-png: 'PNG 图像';
+    --LOC-file-type-jpeg: 'JPEG 图像';
+    --LOC-file-type-gif: 'GIF 动画图像';
+    --LOC-file-type-bmp: 'BMP 图像';
+    --LOC-file-type-truetype: 'TrueType 字体文件';
+    --LOC-file-type-opentype: 'OpenType 字体文件';
+    --LOC-file-type-woff: 'WOFF 字体文件';
+    --LOC-file-type-woff2: 'WOFF2 字体文件';
+    --LOC-file-type-ascii: '其他文件';
+    --LOC-file-type-pdf: 'PDF 文档';
+    --LOC-file-type-7zip: '7-Zip 压缩文件';
+    --LOC-file-type-zip: 'ZIP 压缩文件';
+    --LOC-file-type-rar: 'RAR 压缩文件';
+    --LOC-file-type-powerpoint: 'PowerPoint 演示文稿';
+    --LOC-file-type-excel: 'Excel 电子表格';
+    --LOC-file-type-word: 'Word 文档';
+    --LOC-file-type-access: 'Access 数据库';
+    --LOC-file-type-obj: '3D 对象文件';
+    --LOC-file-type-txt: '纯文本';
+    --LOC-file-type-js: 'JavaScript 代码';
+    --LOC-file-type-css: 'CSS 层叠样式表';
+    --LOC-file-type-html: 'HTML 网页';
+    --LOC-file-type-xml: 'XML ドキュメント';
+    --LOC-file-type-exe: '可执行文件';
+    --LOC-manage-attachments: '管理附件';
+}
+
+:root:lang(ja) {
+    --LOC-file-type-svg: 'SVG ベクターグラフィックス';
+    --LOC-file-type-png: 'PNG 画像';
+    --LOC-file-type-jpeg: 'JPEG 画像';
+    --LOC-file-type-gif: 'GIF アニメーション画像';
+    --LOC-file-type-bmp: 'BMP 画像';
+    --LOC-file-type-truetype: 'TrueType フォント';
+    --LOC-file-type-opentype: 'OpenType フォント';
+    --LOC-file-type-woff: 'WOFF フォント';
+    --LOC-file-type-woff2: 'WOFF2 フォント';
+    --LOC-file-type-ascii: 'その他のファイル';
+    --LOC-file-type-pdf: 'PDF 文書';
+    --LOC-file-type-7zip: '7-Zip 圧縮ファイル';
+    --LOC-file-type-zip: 'ZIP 圧縮ファイル';
+    --LOC-file-type-rar: 'RAR 圧縮ファイル';
+    --LOC-file-type-powerpoint: 'PowerPoint プレゼンテーション';
+    --LOC-file-type-excel: 'Excel スプレッドシート';
+    --LOC-file-type-word: 'Word 文書';
+    --LOC-file-type-access: 'Access データベース';
+    --LOC-file-type-obj: '3D オブジェクトファイル';
+    --LOC-file-type-txt: 'テキストファイル';
+    --LOC-file-type-js: 'JavaScript コード';
+    --LOC-file-type-css: 'CSS スタイルシート';
+    --LOC-file-type-html: 'HTML ウェブページ';
+    --LOC-file-type-xml: 'XML 文書';
+    --LOC-file-type-exe: '実行可能ファイル';
+    --LOC-manage-attachments: '添付ファイルの管理';
+}
+
+tr[id*="file-row"] :is(
+    span[title*="SVG"],
+    span[title*="PNG"],
+    span[title*="JPEG"],
+    span[title*="GIF"],
+    span[title*="BMP"],
+    span[title*="TrueType"],
+    span[title*="OpenType"],
+    span[title*="WOFF"],
+    span[title*="WOFF2"],
+    span[title*="ASCII"],
+    span[title*="PDF"],
+    span[title*="7-zip"],
+    span[title*="Zip"],
+    span[title*="rar"],
+    span[title*="PowerPoint"],
+    span[title*="Excel"],
+    span[title*="Word"],
+    span[title*="Access"]
+),
+table.page-files td:has(a[href*=".obj"])+td span,
+table.page-files td:has(a[href*=".txt"])+td span,
+table.page-files td:has(a[href*=".js"])+td span,
+table.page-files td:has(a[href*=".css"])+td span,
+table.page-files td:has(a[href*=".html"])+td span,
+table.page-files td:has(a[href*=".xml"])+td span,
+table.page-files td:has(a[href*=".exe"])+td span
+{
+    font-size: 0rem;
+}
+
+tr[id*="file-row"] :is(
+    span[title*="SVG"],
+    span[title*="PNG"],
+    span[title*="JPEG"],
+    span[title*="GIF"],
+    span[title*="BMP"],
+    span[title*="TrueType"],
+    span[title*="OpenType"],
+    span[title*="WOFF"],
+    span[title*="WOFF2"],
+    span[title*="ASCII"],
+    span[title*="PDF"],
+    span[title*="7-zip"],
+    span[title*="Zip"],
+    span[title*="rar"],
+    span[title*="PowerPoint"],
+    span[title*="Excel"],
+    span[title*="Word"],
+    span[title*="Access"]
+)::before,
+table.page-files td:has(a[href*=".obj"])+td span::before,
+table.page-files td:has(a[href*=".txt"])+td span::before,
+table.page-files td:has(a[href*=".js"])+td span::before,
+table.page-files td:has(a[href*=".css"])+td span::before,
+table.page-files td:has(a[href*=".html"])+td span::before,
+table.page-files td:has(a[href*=".xml"])+td span::before,
+table.page-files td:has(a[href*=".exe"])+td span::before
+{
+    font-size: 1rem;
+}
+
+p.manage-attachments-link a {
+    font-size: 0;
+}
+
+p.manage-attachments-link a::before {
+    content: var(--LOC-manage-attachments);
+    font-size: var(--p-font-size-medium);
+}
+
+tr[id*="file-row"] span[title*="SVG"]::before {
+    content: var(--LOC-file-type-svg);
+}
+
+tr[id*="file-row"] span[title*="PNG"]::before {
+    content: var(--LOC-file-type-png);
+}
+
+tr[id*="file-row"] span[title*="JPEG"]::before {
+    content: var(--LOC-file-type-jpeg);
+}
+
+tr[id*="file-row"] span[title*="GIF"]::before {
+    content: var(--LOC-file-type-gif);
+}
+
+tr[id*="file-row"] span[title*="BMP"]::before {
+    content: var(--LOC-file-type-bmp);
+}
+
+tr[id*="file-row"] span[title*="TrueType"]::before {
+    content: var(--LOC-file-type-truetype);
+}
+
+tr[id*="file-row"] span[title*="OpenType"]::before {
+    content: var(--LOC-file-type-opentype);
+}
+
+tr[id*="file-row"] span[title*="WOFF"]::before {
+    content: var(--LOC-file-type-woff);
+}
+
+tr[id*="file-row"] span[title*="WOFF2"]::before {
+    content: var(--LOC-file-type-woff2);
+}
+
+tr[id*="file-row"] span[title*="ASCII"]::before {
+    content: var(--LOC-file-type-ascii);
+}
+
+tr[id*="file-row"] span[title*="PDF"]::before {
+    content: var(--LOC-file-type-pdf);
+}
+
+tr[id*="file-row"] span[title*="7-zip"]::before {
+    content: var(--LOC-file-type-7zip);
+}
+
+tr[id*="file-row"] span[title*="Zip"]::before {
+    content: var(--LOC-file-type-zip);
+}
+
+tr[id*="file-row"] span[title*="rar"]::before {
+    content: var(--LOC-file-type-rar);
+}
+
+tr[id*="file-row"] span[title*="PowerPoint"]::before {
+    content: var(--LOC-file-type-powerpoint);
+}
+
+tr[id*="file-row"] span[title*="Excel"]::before {
+    content: var(--LOC-file-type-excel);
+}
+
+tr[id*="file-row"] span[title*="Word"]::before {
+    content: var(--LOC-file-type-word);
+}
+
+tr[id*="file-row"] span[title*="Access"]::before {
+    content: var(--LOC-file-type-access);
+}
+
+table.page-files td:has(a[href*=".obj"])+td span::before {
+    content: var(--LOC-file-type-obj);
+}
+
+table.page-files td:has(a[href*=".txt"])+td span::before {
+    content: var(--LOC-file-type-txt);
+}
+
+table.page-files td:has(a[href*=".js"])+td span::before {
+    content: var(--LOC-file-type-js);
+}
+
+table.page-files td:has(a[href*=".css"])+td span::before {
+    content: var(--LOC-file-type-css);
+}
+
+table.page-files td:has(a[href*=".html"])+td span::before {
+    content: var(--LOC-file-type-html);
+}
+
+table.page-files td:has(a[href*=".xml"])+td span::before {
+    content: var(--LOC-file-type-xml);
+}
+
+table.page-files td:has(a[href*=".exe"])+td span::before {
+    content: var(--LOC-file-type-exe);
+}
+
+/* Action Area - Website Tools */
+
+:root {
+    --LOC-website-tools-wanted-pages: 'Wanted Pages';
+    --LOC-website-tools-orphaned-pages: 'Orphaned Pages';
+    --LOC-website-tools-draft-pages: 'Draft Pages';
+}
+
+:root:lang(cn) {
+    --LOC-website-tools-wanted-pages: '待建页面';
+    --LOC-website-tools-orphaned-pages: '孤立页面';
+    --LOC-website-tools-draft-pages: '草稿页面';
+}
+
+:root:lang(ja) {
+    --LOC-website-tools-wanted-pages: '未作成ページ';
+    --LOC-website-tools-orphaned-pages: '孤立ページ';
+    --LOC-website-tools-draft-pages: '下書きページ';
+}
+
+#action-area :is(
+    a[onclick*="SiteToolsModule.listeners.wantedPages"],
+    a[onclick*="SiteToolsModule.listeners.orphanedPages"],
+    a[onclick*="SiteToolsModule.listeners.draftPages"]
+) {
+    font-size: 0rem;
+}
+
+#action-area :is(
+    a[onclick*="SiteToolsModule.listeners.wantedPages"],
+    a[onclick*="SiteToolsModule.listeners.orphanedPages"],
+    a[onclick*="SiteToolsModule.listeners.draftPages"]
+)::before {
+    font-size: 1rem;
+}
+
+#action-area a[onclick*="SiteToolsModule.listeners.wantedPages"]::before {
+    content: var(--LOC-website-tools-wanted-pages);
+}
+
+#action-area a[onclick*="SiteToolsModule.listeners.orphanedPages"]::before {
+    content: var(--LOC-website-tools-orphaned-pages);
+}
+
+#action-area a[onclick*="SiteToolsModule.listeners.draftPages"]::before {
+    content: var(--LOC-website-tools-draft-pages);
+}
+
+/* Action Area - Watchers */
+
+:root {
+    --LOC-watchers-title: 'Who Watches This Page';
+    --LOC-watchers-description: 'Those people will receive notifications when changes are made to this page or the page is commented.';
+}
+
+:root:lang(cn) {
+    --LOC-watchers-title: '此页面的关注者　';
+    --LOC-watchers-description: '当此页面或页面被评论时，这些人将收到通知。';
+}
+
+:root:lang(ja) {
+    --LOC-watchers-title: 'このページを監視する人';
+    --LOC-watchers-description: 'このページまたはページがコメントされたとき、これらの人は通知を受け取ります。';
+}
+
+#action-area:has(p+ul[style="list-style: none"]) > h1 {
+    font-size: 0;
+}
+
+#action-area:has(p+ul[style="list-style: none"]) > h1::before {
+    content: var(--LOC-watchers-title);
+    font-size: var(--p-font-size-xlarge);
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 2rem;
+    margin-right: 0rem;
+}
+
+#action-area:has(p+ul[style="list-style: none"]) > h1::after {
+    margin-left: 0rem;
+}
+
+#action-area:has(p+ul[style="list-style: none"]) > h1 + p {
+    font-size: 0rem;
+    margin: 1rem 0rem;
+}
+
+#action-area:has(p+ul[style="list-style: none"]) > h1 + p::before {
+    font-size: var(--p-font-size-medium);
+    content: var(--LOC-watchers-description);
+}
+
+/* Owindow - Draft */
+
+:root {
+    --LOC-owindow-cancel-and-leave-draft: 'Cancel and Leave Draft';
+    --LOC-owindow-cancel-and-delete-draft: 'Cancel and Delete Draft';
+    --LOC-owindow-draft: 'You have saved a draft. Please select an option.';
+    --LOC-owindow-draft-title: 'Draft Exists';
+}
+
+:root:lang(cn) {
+    --LOC-owindow-cancel-and-leave-draft: '离开并保留草稿';
+    --LOC-owindow-cancel-and-delete-draft: '离开并删除草稿';
+    --LOC-owindow-draft: '你已经保存了草稿，请选择一个选项。';
+    --LOC-owindow-draft-title: '已有草稿';
+}
+
+:root:lang(ja) {
+    --LOC-owindow-cancel-and-leave-draft: '下書きを保存して終了';
+    --LOC-owindow-cancel-and-delete-draft: '下書きを削除して終了';
+    --LOC-owindow-draft: 'あなたは既に下書きを保存しました。選択してください。';
+    --LOC-owindow-draft-title: '下書きが存在します';
+}
+
+a.btn.btn-default.button.button-cancel-and-leave-draft,
+a.btn.btn-default.button.button-cancel-and-delete-draft,
+.owindow:has(a.btn.btn-default.button.button-cancel-and-leave-draft) div.content p,
+.owindow:has(a.btn.btn-default.button.button-cancel-and-leave-draft) div.title {
+    font-size: 0;
+}
+
+a.btn.btn-default.button.button-cancel-and-leave-draft::before {
+    content: var(--LOC-owindow-cancel-and-leave-draft);
+    font-size: var(--p-font-size-small);
+}
+
+a.btn.btn-default.button.button-cancel-and-delete-draft::before {
+    content: var(--LOC-owindow-cancel-and-delete-draft);
+    font-size: var(--p-font-size-small);
+}
+
+.owindow:has(a.btn.btn-default.button.button-cancel-and-leave-draft) div.content p::before {
+    font-size: var(--p-font-size-medium);
+    content: var(--LOC-owindow-draft);
+}
+
+.owindow:has(a.btn.btn-default.button.button-cancel-and-leave-draft) div.title::before {
+    font-size: var(--p-font-size-medium);
+    content: var(--LOC-owindow-draft-title);
+}
+
+/* Page Tags */
+
+:root {
+    --LOC-page-tags: 'Tags';
+}
+
+:root:lang(cn) {
+    --LOC-page-tags: '标签';
+}
+
+:root:lang(ja) {
+    --LOC-page-tags: 'タグ';
+}
+
+/* Close Message Button */
+
+:root {
+    --LOC-close-message: 'Close Message';
+}
+
+:root:lang(cn) {
+    --LOC-close-message: '关闭消息';
+}
+
+:root:lang(ja) {
+    --LOC-close-message: 'メッセージを閉じる';
+}
+
+a.btn.btn-default.button.button-close-message {
+    font-size: 0;
+}
+
+a.btn.btn-default.button.button-close-message::before {
+    content: var(--LOC-close-message);
+    font-size: var(--p-font-size-small);
+}
+
+/* Footnotes */
+
+:root {
+    --LOC-footnotes: 'Footnotes';
+}
+
+:root:lang(cn) {
+    --LOC-footnotes: '脚注';
+}
+
+:root:lang(ja) {
+    --LOC-footnotes: '脚注';
+}
+
+/* More Option */
+
+:root {
+    --LOC-less-option: 'More Option';
+}
+
+:root:lang(cn) {
+    --LOC-less-option: '更多选项';
+}
+
+:root:lang(ja) {
+    --LOC-less-option: 'その他のオプション';
+}
+
+a[onclick*="WIKIDOT.modules.ForumViewThreadModule.listeners.toggleThreadOptions(event)"] {
+    font-size: 0 !important;
+}
+
+a[onclick*="WIKIDOT.modules.ForumViewThreadModule.listeners.toggleThreadOptions(event)"]::before {
+    content: var(--LOC-less-option);
+    font-size: var(--p-font-size-medium);
+}
+
+/* Insert Code Button */
+
+:root {
+    --LOC-insert-code: 'Insert Code';
+}
+
+:root:lang(cn) {
+    --LOC-insert-code: '插入代码';
+}
+
+:root:lang(ja) {
+    --LOC-insert-code: 'コードを挿入する';
+}
+
+a.btn.btn-default.button.button-insert-code {
+    font-size: 0;
+}
+
+a.btn.btn-default.button.button-insert-code::before {
+    content: var(--LOC-insert-code);
+    font-size: var(--p-font-size-small);
+}
+
+/* Cancel Button */
+
+:root {
+    --LOC-cancel: 'Cancel';
+}
+
+:root:lang(cn) {
+    --LOC-cancel: '取消';
+}
+
+:root:lang(ja) {
+    --LOC-cancel: 'キャンセル';
+}
+
+a.btn.btn-default.button.button-cancel {
+    font-size: 0;
+}
+
+a.btn.btn-default.button.button-cancel::before {
+    content: var(--LOC-cancel);
+    font-size: var(--p-font-size-small);
+}
+
+/* Yes, revert Button */
+
+:root {
+    --LOC-yes-revert: 'I know what I am doing!';
+}
+
+:root:lang(cn) {
+    --LOC-yes-revert: '我知道我在做什么！';
+}
+
+:root:lang(ja) {
+    --LOC-yes-revert: '私は自分が何をしているか分かっています。';
+}
+
+a.btn.btn-default.button.button-yes\,-revert {
+    font-size: 0;
+}
+
+a.btn.btn-default.button.button-yes\,-revert::before {
+    content: var(--LOC-yes-revert);
+    font-size: var(--p-font-size-small);
+}
+
+:root {
+    --LOC-revert-confirm-title: 'Confirm Action';
+    --LOC-revert-confirm-content-1: 'Are you sure you want to revert this page?';
+    --LOC-revert-confirm-content-2: 'You are about to revert the entire page to version';
+    --LOC-revert-confirm-content-3: '.\A';
+    --LOC-revert-confirm-content-4: 'The page content and title will be changed back to that version, and your changes will be visible to everyone. This will create a new page version. Attachments, metadata, parent page and other page properties will not be affected.\A';
+    --LOC-revert-confirm-content-5: 'Warning:';
+    --LOC-revert-confirm-content-6: 'Do not revert page versions unless you really know what you are doing. You can still undo this action by reverting again later.\A';
+}
+
+:root:lang(cn) {
+    --LOC-revert-confirm-title: '需要确认的操作';
+    --LOC-revert-confirm-content-1: '你确定要回档页面吗？';
+    --LOC-revert-confirm-content-2: '你正在尝试将整个页面回退到第';
+    --LOC-revert-confirm-content-3: '个版本。\A';
+    --LOC-revert-confirm-content-4: '页面内容、标题会被修改回那个版本，并且其他所有人都能看到你的更改。这会创建一个新的页面版本。附件、元数据、父页面等其他页面属性不受影响。\A';
+    --LOC-revert-confirm-content-5: '警告：';
+    --LOC-revert-confirm-content-6: '除非你真的知道自己在做什么，否则不要轻易回退页面版本。你在之后仍然可以通过再次回退的方式撤销这次操作。\A';
+}
+
+:root:lang(ja) {
+    --LOC-revert-confirm-title: '操作の確認';
+    --LOC-revert-confirm-content-1: 'このページを元に戻しますか？';
+    --LOC-revert-confirm-content-2: 'ページ全体をバージョン';
+    --LOC-revert-confirm-content-3: 'に戻そうとしています。\A';
+    --LOC-revert-confirm-content-4: 'ページのコンテンツとタイトルがそのバージョンに変更され、変更内容は全員に表示されます。これにより新しいページバージョンが作成されます。添付ファイル、メタデータ、親ページなどのその他のページプロパティは影響を受けません。\A';
+    --LOC-revert-confirm-content-5: '警告:';
+    --LOC-revert-confirm-content-6: '自分が何をしているのかを確実に理解している場合を除き、ページバージョンを元に戻さないでください。後で再度元に戻すことでこの操作を取り消すことはできます。\A';
+}
+
+div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) :where(
+    .title,
+    h1,
+    .content > p:nth-child(2),
+    .content > p:nth-child(3),
+    .content > p:nth-child(4)
+) {
+    font-size: 0;
+    margin-bottom: 1rem;
+}
+
+div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) .title::before {
+    font-size: var(--p-font-size-large);
+    content: var(--LOC-revert-confirm-title);
+}
+
+
+div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) h1::before {
+    content: var(--LOC-revert-confirm-content-1);
+    font-size: var(--p-font-size-xlarge);
+}
+
+div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) .content>p:nth-child(2)::before {
+    content: var(--LOC-revert-confirm-content-2);
+    font-size: var(--p-font-size-medium);
+    white-space: pre-wrap;
+}
+
+div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) .content>p:nth-child(2) strong {
+    font-size: var(--p-font-size-medium);
+}
+
+div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) .content>p:nth-child(2) strong::after {
+    content: var(--LOC-revert-confirm-content-3);
+    font-size: var(--p-font-size-medium);
+    font-weight: normal;
+    white-space: pre-wrap;
+}
+
+div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) .content>p:nth-child(3)::before {
+    content: var(--LOC-revert-confirm-content-4);
+    font-size: var(--p-font-size-medium);
+    white-space: pre-wrap;
+}
+
+div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) .content>p:nth-child(4)::before {
+    content: var(--LOC-revert-confirm-content-5);
+    font-size: var(--p-font-size-medium);
+    font-weight: bold;
+    color: var(--p-warning-color);
+}
+
+div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) .content>p:nth-child(4)::after {
+    content: var(--LOC-revert-confirm-content-6);
+    font-size: var(--p-font-size-medium);
+    white-space: pre-wrap;
+}
+
+/* forever delete confirm */
+
+:root {
+    --LOC-rename-option-delete: 'This will remove the page completely and it will not be possible to recover the data. Are you sure you want to do this?';
+}
+
+:root:lang(cn) {
+    --LOC-rename-option-delete: '这会彻底删除页面，并且永远都不能恢复内容。你确定要这样做吗？';
+}
+
+:root:lang(ja) {
+    --LOC-rename-option-delete: 'これによりページが完全に削除され、コンテンツを復元することは二度とできなくなります。本当に実行してもよろしいですか？';
+}
+
+div#rename-option-delete p {
+    font-size: 0;
+}
+
+div#rename-option-delete p::before {
+    content: var(--LOC-rename-option-delete);
+    font-size: var(--p-font-size-medium);
+}

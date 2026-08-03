@@ -1,0 +1,136 @@
+/*
+ * ==========
+ * 顶栏自动隐藏
+ * 适配移动端
+ * ==========
+ */
+
+:root{
+    --header-bg-gradient-opacity: 0.55;
+    --header-border-gradient-opacity: 0.85;
+    --header-bg-blur: 10px;
+}
+
+#header {
+    --header-gradient-bar: linear-gradient(120deg, rgba(var(--basalt-bright-element-color), var(--header-border-gradient-opacity)), rgba(var(--basalt-polished-color), var(--header-border-gradient-opacity)));
+
+    --header-bg-gradient-opacity: 0;
+    --header-border-gradient-opacity: 0;
+    --header-bg-blur: 0px;
+    top: 0;
+    background: rgba(var(--header-background-color), var(--header-bg-gradient-opacity));
+    border-bottom: 0.25rem solid;
+    backdrop-filter: blur(var(--header-bg-blur));
+    border-image: var(--header-gradient-bar) 1;
+    transition: .35s ease-out 1.5s allow-discrete;
+}
+
+#header :is(#login-status, .open-menu) {
+    background: rgba(var(--basalt-tertiary-color), calc(0.85 - var(--header-bg-gradient-opacity)));
+    backdrop-filter: blur(calc(10px - var(--header-bg-blur)));
+    transition: .5s ease-out 1.5s allow-discrete;
+}
+
+#header > :not(#login-status),
+#top-bar div[class*=top-bar] > ul {
+    opacity: 0;
+    visibility: hidden;
+    transition: .35s ease-out 1.5s allow-discrete;
+}
+
+#header:is(:focus, :focus-within, :hover) {
+    --header-gradient-bar: linear-gradient(120deg, rgba(var(--basalt-bright-element-color), var(--header-border-gradient-opacity)), rgba(var(--basalt-polished-color), var(--header-border-gradient-opacity)));
+
+    --header-bg-gradient-opacity: 0.55;
+    --header-border-gradient-opacity: 0.85;
+    --header-bg-blur: 10px;
+    transition: .35s ease-in .375s allow-discrete;
+}
+
+#header:is(:focus, :focus-within, :hover) > :not(#login-status),
+#header:is(:focus, :focus-within, :hover) > #top-bar div[class*=top-bar] > ul {
+    opacity: 1;
+    visibility: visible;
+    transition: .35s ease-out .4s allow-discrete;
+}
+
+#header:is(:focus, :focus-within, :hover) :is(#login-status, .open-menu) {
+    background: none;
+    backdrop-filter: none;
+    box-shadow: none;
+    transition: .35s ease-out .375s allow-discrete;
+}
+
+#header::before,
+#header::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+#header:focus-within::after,
+#header:focus-within::before,
+#header:focus::after,
+#header:focus::before,
+#header:hover::after,
+#header:hover::before {
+    height: 100%;
+    top: calc(var(--base-header-height) * -1);
+}
+
+#header::before {
+    background-color: rgb(var(--basalt-polished-color));
+    transition: all 0s 0s;
+}
+
+#header::after {
+    background-color: rgb(var(--basalt-undertone));
+    transition: all 0s 0s;
+}
+
+#header::before,
+#header:focus-within::before,
+#header:focus::before,
+#header:hover::before {
+    transition: height var(--header-link-transition-1st),
+                top .205s ease-out .55s;
+}
+
+#header::after,
+#header:focus-within::after,
+#header:focus::after,
+#header:hover::after {
+    transition: height var(--header-link-transition-2nd),
+                top .15s ease .4s;
+}
+
+#content-wrap {
+    top: calc(var(--base-header-height) * -1 / 2);
+    position: relative;
+}
+
+@media only screen and (max-width: 1024px) {
+    #header {
+        top: 0;
+        grid-template-areas: 'open-menu h-link h-link search user' 'top-bar top-bar top-bar top-bar top-bar';
+        grid-template-rows: var(--base-header-height) var(--top-bar-mobile-height);
+    }
+
+    #header:focus-within::after,
+    #header:focus-within::before,
+    #header:focus::after,
+    #header:focus::before,
+    #header:hover::after,
+    #header:hover::before {
+        top: calc((var(--base-header-height) + var(--top-bar-mobile-height)) * -1);
+    }
+
+    #content-wrap {
+        top: calc((var(--base-header-height) + var(--top-bar-mobile-height)) * -1 / 2);
+    }			
+}
