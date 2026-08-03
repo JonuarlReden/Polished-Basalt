@@ -1,6 +1,6 @@
-![Polished Basalt](<Polished Basalt Theme.svg>)
+![Polished Basalt](<./images/Polished Basalt Theme.svg>)
 
-![磨制玄武岩](<Polished Basalt Theme CN.svg>)
+![磨制玄武岩](<./images/Polished Basalt Theme CN.svg>)
 
 # 第一阶段（Milestone 1）
 
