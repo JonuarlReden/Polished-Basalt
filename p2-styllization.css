@@ -206,14 +206,11 @@ sup.footnoteref {
     padding: .15em .05em;
     -webkit-user-select: none;
     user-select: none;
+    line-height: 90%;
+    top: -.375rem;
 }
 
 sup.footnoteref > a {
-    color: var(--fnColor, #E6283C);
-}
-
-sup.footnoteref::before {
-    content: "脚注";
     color: var(--fnColor, #E6283C);
 }
 
@@ -221,6 +218,91 @@ sup.footnoteref:hover {
     text-decoration: none;
     cursor: pointer;
     background-color: var(--fnColor, #E6283C);
+}
+div.hovertip {
+    border-radius: 0;
+    box-sizing: border-box;
+    background-color: rgb(var(--basalt-primary-color)) !important;
+    border: solid 2px rgb(var(--basalt-tertiary-color)) !important;
+    border-left: none !important;
+    padding: 0.8125rem;
+    width: 25rem !important;
+    top: initial !important;
+    left: initial !important;
+    position: fixed !important;
+    display: block !important;
+    right: var(--posX);
+    bottom: var(--posX);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.15s linear var(--fnLinger), visibility 0.01s linear var(--fnInteract);
+    animation: none;
+    z-index: 29;
+}
+
+div.hovertip:not(:has(div[class*="-heading"])) {
+    border: solid 2px rgb(var(--basalt-tertiary-color)) !important;
+    border-left: none !important;
+    box-shadow: -8px 0px rgb(var(--basalt-polished-color));
+}
+
+div.hovertip:is(:hover, [style*="display: block"]) {
+    visibility: visible;
+    opacity: 1;
+    z-index: 30;
+    transition: opacity 0.15s linear;
+}
+
+div.hovertip div.content {
+    padding: 0;
+}
+
+div.hovertip div.content div[class] div[class*="-heading"] {
+    background-color: rgb(var(--basalt-overtone));
+    color: rgba(255, 255, 255, 0.8);
+    font-family: var(--mono-font);
+    font-size: 1.125rem;
+    line-height: inherit;
+    inset-block-start: -1.5em;
+    inset-inline-start: 0;
+    margin-block-end: -1em;
+    padding: 0 0.5em;
+    position: absolute;
+    width: max-content;
+    top: -1.25rem;
+    left: -0.5rem;
+    z-index: 10;
+}
+
+.hovertip .content .footnote::before, .hovertip .content .reference::before {
+    inset-inline-start: -0.5rem;
+    width: 8px;
+    background-color: rgb(var(--basalt-UI-dark-palette));
+}
+
+div.hovertip div.content div[class] div[class="f-heading"],
+.hovertip .content .footnote::before {
+    background-color: rgb(var(--basalt-bright-element-color));
+}
+
+div.hovertip div.content div[class] div[class="r-heading"],
+.hovertip .content .reference::before {
+    background-color: rgb(var(--basalt-dark-element-color));
+}
+
+div.hovertip div.content div[class] div[class*="-content"] {
+    margin: 0;
+    padding: 0;
+}
+
+div.hovertip div[class*="-footer"] {
+    display: none;
+}
+ 
+@media only screen and (max-width: 1279px) {
+    div.hovertip {
+        left: 15% !important;
+    }
 }
 
 /* 档案 */
