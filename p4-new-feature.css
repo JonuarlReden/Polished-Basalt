@@ -308,13 +308,13 @@ div[class^="deletion"]::before {
 }
 
 div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container),
-.colmod-collapsiblealt foldable-list-container {
+.colmod-collapsiblealt .foldable-list-container {
     position: relative;
     z-index: 5;
 }
 
 div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a,
-.colmod-collapsiblealt foldable-list-container a {
+.colmod-collapsiblealt .foldable-list-container a {
     font-family: var(--UI-font);
     font-weight: bold;
     font-size: 1.125em;
@@ -326,7 +326,7 @@ div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .f
 }
 
 div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a:is(:hover, :focus),
-.colmod-collapsiblealt foldable-list-container a:is(:hover, :focus){
+.colmod-collapsiblealt .foldable-list-container a:is(:hover, :focus){
     text-decoration: none;
     color: rgb(var(--top-bar-link-color-hover));
     border-bottom: solid .5rem rgb(var(--basalt-sub-text-color));
@@ -335,15 +335,15 @@ div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .f
 
 div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a:is(:hover, :focus)::before,
 div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a:is(:hover, :focus)::after,
-.colmod-collapsiblealt foldable-list-container a:is(:hover, :focus)::before,
-.colmod-collapsiblealt foldable-list-container a:is(:hover, :focus)::after {
+.colmod-collapsiblealt .foldable-list-container a:is(:hover, :focus)::before,
+.colmod-collapsiblealt .foldable-list-container a:is(:hover, :focus)::after {
     height: 100%;
 }
 
 div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a::before,
 div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a::after,
-.colmod-collapsiblealt foldable-list-container a::before,
-.colmod-collapsiblealt foldable-list-container a::after {
+.colmod-collapsiblealt .foldable-list-container a::before,
+.colmod-collapsiblealt .foldable-list-container a::after {
     content: '';
     display: block;
     position: absolute;
@@ -355,24 +355,24 @@ div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .f
 }
 
 div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a::before,
-.colmod-collapsiblealt foldable-list-container a::before {
+.colmod-collapsiblealt .foldable-list-container a::before {
     background-color: rgb(var(--top-bar-link-background-hover-alt));
     transition: height var(--header-link-transition-2nd);
 }
 
 div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a:is(:hover, :focus)::before,
-.colmod-collapsiblealt foldable-list-container a:is(:hover, :focus)::before {
+.colmod-collapsiblealt .foldable-list-container a:is(:hover, :focus)::before {
     transition: height var(--header-link-transition-1st);
 }
 
 div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a::after,
-.colmod-collapsiblealt foldable-list-container a::after {
+.colmod-collapsiblealt .foldable-list-container a::after {
     background-color: rgb(var(--top-bar-link-background-hover));
     transition: height var(--header-link-transition-1st);
 }
 
 div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a:is(:hover, :focus)::after,
-.colmod-collapsiblealt foldable-list-container a:is(:hover, :focus)::after {
+.colmod-collapsiblealt .foldable-list-container a:is(:hover, :focus)::after {
     transition: height var(--header-link-transition-2nd);
 }
 
