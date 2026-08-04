@@ -158,6 +158,10 @@ form#edit-page-form table.edit-page-bottomtable {
 
 /* 统一脚注 */
 
+.fnnum {
+    line-height: 0.65rem;
+}
+
 .fnnum:hover::after, .fnnum:hover::before, sup.footnoteref:hover::before, sup.footnoteref:hover > a {
     color: white;
 }
@@ -206,7 +210,7 @@ sup.footnoteref {
     padding: .15em .05em;
     -webkit-user-select: none;
     user-select: none;
-    line-height: 90%;
+    line-height: 0.65rem;
     top: -.375rem;
 }
 
