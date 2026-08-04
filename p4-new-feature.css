@@ -61,6 +61,10 @@ div.creditButtonStandalone > p > a {
     }
 }
 
+.colmod-content {
+    width: 100%;
+}
+
 /* ACS组件配色与染色优化 */
 
 .polished-acs {
