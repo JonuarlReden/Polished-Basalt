@@ -156,6 +156,73 @@ form#edit-page-form table.edit-page-bottomtable {
     box-shadow: 9px 4px rgba(var(--basalt-polished-color), 0.75);
 }
 
+/* 统一脚注 */
+
+.fnnum:hover::after, .fnnum:hover::before, sup.footnoteref:hover::before, sup.footnoteref:hover > a {
+    color: white;
+}
+
+.fnnum::after {
+    content: "" counter(megacount);
+    color: var(--fnColor, #E6283C);
+    margin-left: -0.15rem;
+}
+
+.fnnum::before {
+    content: "备忘";
+    color: var(--fnColor, #E6283C);
+    margin-left: 0.2rem;
+}
+
+.fncon {
+    width: 25rem;
+    position: fixed;
+    display: block;
+    right: var(--posX);
+    bottom: var(--posX);
+}
+
+.fnnum:hover + .fncon, .fncon:is(:hover,:focus-within) {
+    right: var(--posX);
+    bottom: var(--posX);
+}
+
+.fncon::before {
+    top: -1.25rem;
+    left: -0.5rem;
+    right: initial;
+    text-align: left;
+    content: "Note " counter(megacount) ".";
+}
+
+sup.footnoteref {
+    display: inline-block;
+    width: max-content;
+    word-break: initial;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: initial;
+    color: transparent;
+    padding: .15em .05em;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+sup.footnoteref > a {
+    color: var(--fnColor, #E6283C);
+}
+
+sup.footnoteref::before {
+    content: "脚注";
+    color: var(--fnColor, #E6283C);
+}
+
+sup.footnoteref:hover {
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--fnColor, #E6283C);
+}
+
 /* 档案 */
 
 div.document, div.document::after, div.document::before {

@@ -57,27 +57,3 @@ div#header-extra-div-3::before {
 #login-status span.printuser:is(:hover, :focus, :focus-within, :target) > a img {
     border-bottom-color: rgb(var(--basalt-tertiary-color));
 }
-
-/* {$centered}/
-
-#header h1 a::before {
-    opacity: 0.2;
-}
-
-/{$centered} */
-
-/* {$retro}/
-
-:root {
-    --header-title-height: 5.5rem;
-}
-
-#top-bar div[class*="top-bar"] > ul > li {
-    flex-grow: 0.075;
-}
-
-#top-bar div[class*="top-bar"] > ul {
-    justify-content: end;
-}
-
-/{$retro} */

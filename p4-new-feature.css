@@ -57,7 +57,7 @@ div.creditButtonStandalone > p > a {
 
 @media only screen and (max-width: 1279px) {
     .fncon {
-        left: 11%;
+        left: 15% !important;
     }
 }
 
@@ -282,17 +282,41 @@ div[class^="deletion"]::before {
 
 /* 高级折叠块 */
 
-div.col-info .collapsible-block-unfolded {
-    display: flex;
-    width: 100%;
+.colmod-collapsiblealt > [class|="colmod-link"],
+.collapsiblealt > .colmod-block > ul > li > [class|="colmod-link"] {
+    margin: none;
+    text-align: none;
+}
+.colmod-collapsiblealt > [class|="colmod-link"] a,
+.collapsiblealt > .colmod-block > ul > li > [class|="colmod-link"] a {
+    padding: none;
+    text-decoration: none;
+    background-color: none;
+    border:1px solid  none;
+    color: none;
+}
+.colmod-collapsiblealt > [class|="colmod-link"] a:hover,
+.colmod-collapsiblealt > [class|="colmod-link"] a:active,
+.collapsiblealt > .colmod-block > ul > li > [class|="colmod-link"] a:hover,
+.collapsiblealt > .colmod-block > ul > li > [class|="colmod-link"] a:active {
+    background: none;
+    text-decoration: none;
 }
 
-div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link) {
+:is(.collapsible-block-unfolded, .colmod-block li) {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container),
+.collapsiblealt foldable-list-container {
     position: relative;
     z-index: 5;
 }
 
-div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link) a {
+div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a,
+.collapsiblealt foldable-list-container a {
     font-family: var(--UI-font);
     font-weight: bold;
     font-size: 1.125em;
@@ -303,20 +327,25 @@ div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link) a 
     transition: border-bottom var(--header-link-transition-1st);
 }
 
-div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link) a:is(:hover, :focus) {
+div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a:is(:hover, :focus),
+.collapsiblealt foldable-list-container a:is(:hover, :focus){
     text-decoration: none;
     color: rgb(var(--top-bar-link-color-hover));
     border-bottom: solid .5rem rgb(var(--basalt-sub-text-color));
     transition: color var(--header-link-transition-1st), border-bottom-color var(--header-link-transition-2nd);
 }
 
-div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link) a:is(:hover, :focus)::before,
-div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link) a:is(:hover, :focus)::after {
+div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a:is(:hover, :focus)::before,
+div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a:is(:hover, :focus)::after,
+.collapsiblealt foldable-list-container a:is(:hover, :focus)::before,
+.collapsiblealt foldable-list-container a:is(:hover, :focus)::after {
     height: 100%;
 }
 
-div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link) a::before,
-div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link) a:after {
+div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a::before,
+div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a::after,
+.collapsiblealt foldable-list-container a::before,
+.collapsiblealt foldable-list-container a::after {
     content: '';
     display: block;
     position: absolute;
@@ -327,23 +356,53 @@ div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link) a:
     z-index: -1;
 }
 
-div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link) a::before {
+div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a::before,
+.collapsiblealt foldable-list-container a::before {
     background-color: rgb(var(--top-bar-link-background-hover-alt));
     transition: height var(--header-link-transition-2nd);
 }
 
-div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link) a:is(:hover, :focus)::before {
+div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a:is(:hover, :focus)::before,
+.collapsiblealt foldable-list-container a:is(:hover, :focus)::before {
     transition: height var(--header-link-transition-1st);
 }
 
-div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link) a::after {
+div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a::after,
+.collapsiblealt foldable-list-container a::after {
     background-color: rgb(var(--top-bar-link-background-hover));
     transition: height var(--header-link-transition-1st);
 }
 
-div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link) a:is(:hover, :focus)::after {
+div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a:is(:hover, :focus)::after,
+.collapsiblealt foldable-list-container a:is(:hover, :focus)::after {
     transition: height var(--header-link-transition-2nd);
 }
+
+div.block-central,
+div.block-central :is(.collapsible-block-unfolded, .colmod-block li) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div.block-left,
+div.block-left :is(.collapsible-block-unfolded, .colmod-block li) {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+
+div.block-right,
+div.block-right :is(.collapsible-block-unfolded, .colmod-block li) {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+}
+
+/* 多列同流 */
 
 div.span-row {
     display: flex;
@@ -445,14 +504,6 @@ div.call span.fncon {
 }
 
 /* 杂项 */
-
-div.block-central,
-div.block-central .collapsible-block-unfolded {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 
 :is(:where(#page-content) table:not(.form),table.wiki-content-table).no-border td {
     border: none;
