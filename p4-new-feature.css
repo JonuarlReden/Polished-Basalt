@@ -315,6 +315,7 @@ div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .f
 
 div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a,
 .colmod-collapsiblealt .foldable-list-container a {
+    color: rgb(var(--link-color));
     font-family: var(--UI-font);
     font-weight: bold;
     font-size: 1.125em;
