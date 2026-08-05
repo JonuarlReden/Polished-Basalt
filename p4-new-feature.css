@@ -6,7 +6,7 @@
 
 /* BUG修复与小修补 */
 
-#container {
+#content-wrap {
     overflow: hidden;
 }
 
