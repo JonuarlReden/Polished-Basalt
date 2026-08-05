@@ -315,13 +315,13 @@ div[class^="deletion"]::before {
     flex-direction: column;
 }
 
-div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container),
+:is(div.col-info, div.licensebox) :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container),
 .colmod-collapsiblealt .foldable-list-container {
     position: relative;
     z-index: 5;
 }
 
-div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a,
+:is(div.col-info, div.licensebox) :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a,
 .colmod-collapsiblealt .foldable-list-container a {
     color: rgb(var(--link-color));
     font-family: var(--UI-font);
@@ -334,7 +334,7 @@ div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .f
     transition: border-bottom var(--header-link-transition-1st);
 }
 
-div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a:is(:hover, :focus),
+:is(div.col-info, div.licensebox) :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a:is(:hover, :focus),
 .colmod-collapsiblealt .foldable-list-container a:is(:hover, :focus){
     text-decoration: none;
     color: rgb(var(--top-bar-link-color-hover));
@@ -342,15 +342,15 @@ div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .f
     transition: color var(--header-link-transition-1st), border-bottom-color var(--header-link-transition-2nd);
 }
 
-div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a:is(:hover, :focus)::before,
-div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a:is(:hover, :focus)::after,
+:is(div.col-info, div.licensebox) :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a:is(:hover, :focus)::before,
+:is(div.col-info, div.licensebox) :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a:is(:hover, :focus)::after,
 .colmod-collapsiblealt .foldable-list-container a:is(:hover, :focus)::before,
 .colmod-collapsiblealt .foldable-list-container a:is(:hover, :focus)::after {
     height: 100%;
 }
 
-div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a::before,
-div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a::after,
+:is(div.col-info, div.licensebox) :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a::before,
+:is(div.col-info, div.licensebox) :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a::after,
 .colmod-collapsiblealt .foldable-list-container a::before,
 .colmod-collapsiblealt .foldable-list-container a::after {
     content: '';
@@ -363,26 +363,45 @@ div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .f
     z-index: -1;
 }
 
-div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a::before,
+:is(div.col-info, div.licensebox) :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a::before,
 .colmod-collapsiblealt .foldable-list-container a::before {
     background-color: rgb(var(--top-bar-link-background-hover-alt));
     transition: height var(--header-link-transition-2nd);
 }
 
-div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a:is(:hover, :focus)::before,
+:is(div.col-info, div.licensebox) :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a:is(:hover, :focus)::before,
 .colmod-collapsiblealt .foldable-list-container a:is(:hover, :focus)::before {
     transition: height var(--header-link-transition-1st);
 }
 
-div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a::after,
+:is(div.col-info, div.licensebox) :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a::after,
 .colmod-collapsiblealt .foldable-list-container a::after {
     background-color: rgb(var(--top-bar-link-background-hover));
     transition: height var(--header-link-transition-1st);
 }
 
-div.col-info :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a:is(:hover, :focus)::after,
+:is(div.col-info, div.licensebox) :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a:is(:hover, :focus)::after,
 .colmod-collapsiblealt .foldable-list-container a:is(:hover, :focus)::after {
     transition: height var(--header-link-transition-2nd);
+}
+
+.licensebox :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a {
+    color: rgb(var(--basalt-sub-text-color));
+    border-bottom: solid .5rem rgb(var(--basalt-sub-text-color));
+    font-weight: 700;
+    font-size: 0.9em;
+}
+
+.licensebox :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a:is(:hover, :focus) {
+    border-bottom: solid .5rem rgb(var(--basalt-dark-element-color));
+}
+
+.licensebox :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a::before{
+    background-color: rgb(var(--basalt-bright-element-color));
+}
+
+.licensebox :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a::after{
+    background-color: rgb(var(--basalt-overtone));
 }
 
 div.block-central,
