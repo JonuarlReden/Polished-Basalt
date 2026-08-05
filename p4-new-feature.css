@@ -6,6 +6,10 @@
 
 /* BUG修复与小修补 */
 
+#container {
+    overflow: hidden;
+}
+
 #top-bar div[class*=top-bar]>ul>li>a {
     font-size: 1.25em;
 }
