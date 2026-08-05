@@ -386,22 +386,22 @@ div[class^="deletion"]::before {
 }
 
 .licensebox :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a {
-    color: rgb(var(--basalt-sub-text-color));
-    border-bottom: solid .5rem rgb(var(--basalt-sub-text-color));
-    font-weight: 700;
-    font-size: 0.9em;
+    color: rgb(var(--basalt-sub-text-color)) !important;
+    border-bottom: solid .5rem rgb(var(--basalt-sub-text-color)) !important;
+    font-weight: 700 !important;
+    font-size: 0.9em !important;
 }
 
 .licensebox :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a:is(:hover, :focus) {
-    border-bottom: solid .5rem rgb(var(--basalt-dark-element-color));
+    border-bottom: solid .5rem rgb(var(--basalt-dark-element-color)) !important;
 }
 
 .licensebox :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a::before{
-    background-color: rgb(var(--basalt-bright-element-color));
+    background-color: rgb(var(--basalt-bright-element-color)) !important;
 }
 
 .licensebox :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a::after{
-    background-color: rgb(var(--basalt-overtone));
+    background-color: rgb(var(--basalt-overtone)) !important;
 }
 
 div.block-central,
