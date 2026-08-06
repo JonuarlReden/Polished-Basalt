@@ -211,7 +211,6 @@ sup.footnoteref {
     -webkit-user-select: none;
     user-select: none;
     line-height: 0.65rem;
-    top: -.375rem;
 }
 
 sup.footnoteref > a {
@@ -222,7 +221,9 @@ sup.footnoteref:hover {
     text-decoration: none;
     cursor: pointer;
     background-color: var(--fnColor, #E6283C);
+    text-decoration: none;
 }
+
 div.hovertip {
     border-radius: 0;
     box-sizing: border-box;
