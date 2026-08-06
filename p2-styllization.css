@@ -211,6 +211,8 @@ sup.footnoteref {
     -webkit-user-select: none;
     user-select: none;
     line-height: 0.65rem;
+    top: 0;
+    vertical-align: super;
 }
 
 sup.footnoteref > a {
