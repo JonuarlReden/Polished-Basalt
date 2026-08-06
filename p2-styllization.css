@@ -287,7 +287,7 @@ div.hovertip div.content div[class] div[class*="-heading"] {
 
 div.hovertip div.content div[class] div[class="f-heading"],
 .hovertip .content .footnote::before {
-    background-color: rgb(var(--basalt-bright-element-color));
+    background-color: rgb(var(--basalt-undertone));
 }
 
 div.hovertip div.content div[class] div[class="r-heading"],
