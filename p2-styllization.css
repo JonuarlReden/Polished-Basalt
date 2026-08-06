@@ -215,13 +215,13 @@ sup.footnoteref {
 
 sup.footnoteref > a {
     color: var(--fnColor, #E6283C);
+    text-decoration: none;
 }
 
 sup.footnoteref:hover {
     text-decoration: none;
     cursor: pointer;
     background-color: var(--fnColor, #E6283C);
-    text-decoration: none;
 }
 
 div.hovertip {
