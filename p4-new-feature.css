@@ -429,6 +429,33 @@ div.block-right :is(.collapsible-block-unfolded, .colmod-block li) {
     justify-content: end;
 }
 
+/* 多重折叠ifprot的回退样式 */
+
+.col-normal .colmod-collapsiblealt .foldable-list-container a {
+    color: rgb(var(--basalt-main-text-color));
+    font-family: initial;
+    font-weight: initial;
+    font-size: 1em;
+    padding: 0.25em 0.75em;
+    border: solid .2rem rgb(var(--basalt-sub-text-color));
+    background-color: rgb(var(--basalt-tertiary-color));
+    transition: all 0.5s linear;
+}
+
+.col-normal .colmod-collapsiblealt .foldable-list-container a:is(:hover, :focus){
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(var(--top-bar-link-color-hover));
+    border-color: rgb(var(--basalt-undertone));
+    background-color: rgb(var(--basalt-undertone));
+    outline: .3rem solid rgb(var(--basalt-polished-color));
+}
+
+.col-normal .colmod-collapsiblealt .foldable-list-container a::before,
+.col-normal .colmod-collapsiblealt .foldable-list-container a::after {
+    display: none;
+}
+
 /* 多列同流 */
 
 div.span-row {
