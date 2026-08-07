@@ -7,6 +7,7 @@
 :root {
     --hoverlink-width: min(35rem, 95vw);
     --hoverlink-height: min(14rem, 20vh);
+    --special-link-color: #1d8bdb;
     --hoverlink-read-more: "↗ 搜一搜？";
 }
 
