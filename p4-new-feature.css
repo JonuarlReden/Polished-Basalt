@@ -444,7 +444,6 @@ div.block-right :is(.collapsible-block-unfolded, .colmod-block li) {
 
 .col-normal .colmod-collapsiblealt .foldable-list-container a:is(:hover, :focus){
     text-decoration: none;
-    font-weight: bold;
     color: rgb(var(--top-bar-link-color-hover));
     border-color: rgb(var(--basalt-undertone));
     background-color: rgb(var(--basalt-undertone));
