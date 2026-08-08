@@ -12,7 +12,7 @@
 /* 字体大小变量补充 */
 
 :root {
-    --p-font-size-small: 0.85rem;
+    --p-font-size-small: var(--true-font-size);
     --p-font-size-medium: var(--true-font-size);
     --p-font-size-large: 1.5rem;
     --p-font-size-xlarge: 2rem;
