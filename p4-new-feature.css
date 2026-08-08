@@ -464,15 +464,23 @@ div.span-row {
     align-items: flex-start;
     flex-wrap: wrap; /* 超出自动换行 */
 }
+
 div.span-row > p {
     text-align: center;
     margin: 0;
 }
+
 div.span-row p:first-child {
     text-align: left;
     flex: 1;
 }
+
 div.span-row p:last-child {
+    text-align: right;
+    flex: 1;
+}
+
+div.span-row .page-rate-widget-box {
     text-align: right;
     flex: 1;
 }

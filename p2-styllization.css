@@ -305,6 +305,10 @@ div.hovertip div.content div[class] div[class*="-content"] {
 div.hovertip div[class*="-footer"] {
     display: none;
 }
+
+.fncon， div.hovertip {
+    width: min(25rem, 65vw);
+}
  
 @media only screen and (max-width: 1279px) {
     div.hovertip {
