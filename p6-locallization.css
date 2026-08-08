@@ -12,25 +12,10 @@
 /* 字体大小变量补充 */
 
 :root {
-    --p-font-size-base: 16px;
-    --p-line-height-base: 1.5;
-    --p-font-sans-serif: "Sarasa Gothic SC", "Noto Sans SC", "微软雅黑", sans-serif;
-    --p-font-serif: "Noto Serif CJK", "Times New Roman", "宋体", serif;
-    --p-font-monospace: "zsft-hk", "Consolas", "Sarasa Gothic SC", monospace;
-    --p-font-size-xxsmall: 0.6rem;
-    --p-line-height-xxsmall: 1.2;
-    --p-font-size-xsmall: 0.8rem;
-    --p-line-height-xsmall: 1.2;
-    --p-font-size-small: 0.9rem;
-    --p-line-height-small: 1.2;
-    --p-font-size-medium: 1rem;
-    --p-line-height-medium: 1.55;
-    --p-font-size-large: 1.2rem;
-    --p-line-height-large: 1.75;
-    --p-font-size-xlarge: 1.4rem;
-    --p-line-height-xlarge: 2.2;
-    --p-font-size-xxlarge: 1.6rem;
-    --p-line-height-xxlarge: 2.4;
+    --p-font-size-small: 0.85rem;
+    --p-font-size-medium: var(--true-font-size);
+    --p-font-size-large: 1.5rem;
+    --p-font-size-xlarge: 2rem;
 }
 
 :root {
