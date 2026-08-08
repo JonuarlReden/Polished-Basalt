@@ -481,8 +481,7 @@ div.span-row p:last-child {
 }
 
 div.span-row .page-rate-widget-box {
-    text-align: right;
-    flex: 1;
+    margin-left: 5em;
 }
 
 /* 邮件 */
