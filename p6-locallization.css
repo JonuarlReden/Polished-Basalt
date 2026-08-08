@@ -474,23 +474,32 @@ a.btn.btn-default.button.button-close-message::before {
 
 :root {
     --LOC-footnotes: 'Footnotes';
+    --LOC-bibliography: 'Footnotes';
 }
 
 :root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
     --LOC-footnotes: '脚注';
+    --LOC-bibliography: '参考文献';
 }
 
 :root:lang(ja), :root[lang="ja-corrections"] {
     --LOC-footnotes: '脚注';
+    --LOC-bibliography: '参考文献';
 }
 
-.footnotes-footer .title {
+.footnotes-footer .title,
+.bibitems .title {
     font-size: 0;
 }
 
 .footnotes-footer .title::before {
     content: var(--LOC-footnotes);
-    font-size: var(--p-font-size-large);
+    font-size: var(--p-font-size-medium);
+}
+
+.bibitems .title::before {
+    content: var(--LOC-bibliography);
+    font-size: var(--p-font-size-medium);
 }
 
 /* More Option */
