@@ -439,7 +439,8 @@ div.block-right :is(.collapsible-block-unfolded, .colmod-block li) {
     padding: 0.25em 0.75em;
     border: solid .2rem rgb(var(--basalt-sub-text-color));
     background-color: rgb(var(--basalt-tertiary-color));
-    transition: all 0.5s linear;
+    transition: all 0.2s ease;
+    outline: 0rem solid rgb(var(--basalt-polished-color));
 }
 
 .col-normal .colmod-collapsiblealt .foldable-list-container a:is(:hover, :focus){
