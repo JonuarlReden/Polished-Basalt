@@ -331,7 +331,7 @@ div[class^="deletion"]::before {
     margin-top: 0.25rem;
     border-bottom: solid .5rem rgb(var(--basalt-undertone));
     position: relative;
-    transition: border-bottom var(--header-link-transition-1st);
+    transition: color var(--header-link-transition-2nd), border-bottom var(--header-link-transition-1st);
 }
 
 :is(div.col-info, div.licensebox) :is(.collapsible-block-folded, .collapsible-block-unfolded-link, .foldable-list-container) a:is(:hover, :focus),
