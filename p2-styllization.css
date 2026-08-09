@@ -349,12 +349,13 @@ div.hovertip div[class*="-footer"] {
 }
 
 .fncon, div.hovertip {
-    width: max(25rem, 65vw);
+    width: 25em;
     max-width: min(70vw, calc(var(--main-content-width) * .75));
 }
  
 @media only screen and (max-width: 1279px) {
-  div.hovertip {
+  .fncon, div.hovertip {
+        width: max(25rem, 65vw);
         left: 15% !important;
   }
 
