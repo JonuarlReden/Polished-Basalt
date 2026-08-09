@@ -160,7 +160,7 @@ form#edit-page-form table.edit-page-bottomtable {
 /* 《粗边框+窄边距+大投影的使用有点何意味》 */
 
 #page-content div.floatbox {
-    margin: 0.25rem 1.25rem 0.75rem;
+    margin-bottom: 0.75rem;
 }
 
 div:is(.document, .darkdocument) {
