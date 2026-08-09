@@ -279,7 +279,7 @@ div.hovertip {
     position: fixed !important;
     display: block !important;
     right: var(--posX);
-    bottom: var(--posY);
+    bottom: var(--posX);
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.15s linear var(--fnLinger), visibility 0.01s linear var(--fnInteract);
@@ -353,8 +353,10 @@ div.hovertip div[class*="-footer"] {
  
 @media only screen and (max-width: 1279px) {
   .fncon, div.hovertip {
-        width: max(25rem, 65vw);
-        left: 15% !important;
+    width: max(25rem, 65vw);
+    left: 15% !important;
+    right: var(--posX);
+    bottom: var(--posY);
   }
 
   :root {
