@@ -73,9 +73,15 @@
     transition-delay: 0.2s, 0.2s, 0s;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1600px) {
+  .hoverlink {
+    position: static;
+  }
+
   .hoverlink-card {
+    top: auto;
     transform: translate(-50%, calc(0px - var(--hoverlink-distance) + var(--hoverlink-motion-distance)));
+    --hoverlink-distance: 100% - 2rem;
   }
 }
 
@@ -87,6 +93,7 @@
     max-height: var(--hoverlink-height);
     min-height: 10rem;
   }
+
   .hoverlink-card:has(.hoverlink-image) {
     height: 12rem;
     grid-template-areas: "title image" "text image";
