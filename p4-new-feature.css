@@ -59,6 +59,10 @@ div.creditButtonStandalone > p > a {
     font-size: initial; 
 }
 
+.fnnum {
+    margin-right: -0.05rem;
+}
+
 @media only screen and (max-width: 1279px) {
     .fncon {
         left: 15% !important;
@@ -318,7 +322,7 @@ div[class^="deletion"]::before {
 .colmod-collapsiblealt .foldable-list-container {
     position: relative;
     z-index: 5;
-    display: flex !important;
+    display: flex;
     justify-content: center;
 }
 
@@ -590,8 +594,4 @@ div.call span.fncon {
 
 .mono {
     font-family: var(--mono-font);
-}
-
-.fnnum {
-    margin-right: -0.05rem;
 }

@@ -175,10 +175,6 @@ div:is(.document, .darkdocument) {
     text-indent: -1.5ch;
 }
 
-.bibitems::before, .footnotes-footer::before {
-    z-index: 9;
-}
-
 .footnotes-footer .title::before,
 .bibitems .title::before {
     padding: .25em .5em;
@@ -190,7 +186,7 @@ div:is(.document, .darkdocument) {
 }
 
 .bibitems .title, .footnotes-footer .title {
-    inset-block-start: -1rem;
+    inset-block-start: calc(-1rem + 2px);
 }
 
 @media only screen and (max-width: 640px) {
@@ -227,6 +223,7 @@ div:is(.document, .darkdocument) {
 
 .fncon {
     width: 25rem;
+    max-width: min(87.5%, calc(var(--main-content-width) * .75));
     position: fixed;
     display: block;
     right: var(--posX);
