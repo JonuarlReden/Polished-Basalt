@@ -222,8 +222,6 @@ div:is(.document, .darkdocument) {
 }
 
 .fncon {
-    width: 25rem;
-    max-width: min(87.5%, calc(var(--main-content-width) * .75));
     position: fixed;
     display: block;
     right: var(--posX);
@@ -352,12 +350,17 @@ div.hovertip div[class*="-footer"] {
 
 .fncon， div.hovertip {
     width: min(25rem, 65vw);
+    max-width: min(70vw, calc(var(--main-content-width) * .75));
 }
  
 @media only screen and (max-width: 1279px) {
-    div.hovertip {
+  div.hovertip {
         left: 15% !important;
-    }
+  }
+
+  :root {
+    --posX: 12vw;
+  }
 }
 
 /* 档案 */
