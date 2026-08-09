@@ -90,7 +90,7 @@ form#edit-page-form table.edit-page-bottomtable {
 }
 
 .owindow {
-    box-shadow: 1rem 1rem rgba(var(--basalt-bright-element-color), 0.5);
+    box-shadow: 0.25rem 0.25rem rgba(var(--basalt-bright-element-color), 0.5);
 }
 
 /* 各div类 */
@@ -146,14 +146,61 @@ form#edit-page-form table.edit-page-bottomtable {
     box-shadow: inset 5px 4px 0px 4px rgba(var(--basalt-tertiary-color), 0.6), inset 0px 0px 0px 4px rgba(var(--basalt-tertiary-color), 0.3);
 }
 
-.bibitems .bibitem {
-    text-indent: -.25rem;
-}
-
 .bibitems::before, .footnotes-footer::before,
 .bibitems .title, .footnotes-footer .title {
     background-color: rgb(var(--basalt-bright-element-color));
-    box-shadow: 9px 4px rgba(var(--basalt-polished-color), 0.75);
+    box-shadow: 4px 0 rgba(var(--basalt-polished-color), 0.75);
+}
+
+.bibitems .title, .footnotes-footer .title {
+    box-shadow: 4px 2px rgba(var(--basalt-polished-color), 0.75);
+}
+
+/* 视觉效果调整                         */
+/* 《粗边框+窄边距+大投影的使用有点何意味》 */
+
+#page-content div.floatbox {
+    margin: 0.25rem 1.25rem 0.75rem;
+}
+
+div:is(.document, .darkdocument) {
+    margin-inline: 1rem;
+}
+
+.bibitems .bibitem {
+    text-indent: -.375ch;
+}
+
+.bibitems .bibitem::after {
+    text-indent: -1.5ch;
+}
+
+.bibitems::before, .footnotes-footer::before {
+    z-index: 9;
+}
+
+.footnotes-footer .title::before,
+.bibitems .title::before {
+    padding: .25em .5em;
+}
+
+.bibitems, .footnotes-footer {
+    padding-top: 0.25rem;
+    padding-block-end: 0.625rem;
+}
+
+.bibitems .title, .footnotes-footer .title {
+    inset-block-start: -1rem;
+}
+
+@media only screen and (max-width: 640px) {
+    #page-content div:is(.floatbox, .floatbox.right) {
+        margin: 0.5rem auto 1.25rem;
+    }
+}
+
+.col-info:has(.collapsible-block), .colmod-block:has(.colmod-collapsiblealt) {
+    margin: 0.5rem auto 1rem;
 }
 
 /* 统一脚注 */
