@@ -258,7 +258,7 @@ div[class^="aiad"][class$="memo"]::after {
     pointer-events: none;
 }
 
-div[class^="admin"] {
+div[class^="admin"][class$="memo"] {
     --memo-heading: "来自SCP基金会管理员的指令";
     --memo-logo: url(https://scpsandboxcn.wikidot.com/local--files/jr-reboot/Administrator-JR-Speciallized-Colored.svg);
     --memo-color: 223, 176, 241;

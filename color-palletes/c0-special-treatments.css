@@ -3,6 +3,7 @@
 div[class^="deletion"] {
     border: solid 2px #f0943e;
     color: #ffffff;
+    background-color: rgb(0, 0, 0);
 }
 
 div[class^="deletion"]::before {
