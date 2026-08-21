@@ -362,7 +362,7 @@ div.hovertip div[class*="-footer"] {
 }
 
 .fncon, div.hovertip {
-    width: 25em !important;
+    width: 25rem !important;
     max-width: min(70vw, calc(var(--main-content-width) * .75));
     padding-top: 1.5rem !important;
 }
