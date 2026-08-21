@@ -31,12 +31,16 @@
  */
 
 @import url('https://fonts.googleapis.com/css2?family=Domine&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+CJK+SC:wght@200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+CJK+SC:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+CJK+SC:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+CJK+SC:wght@100..900&display=swap');
 @import url("https://fontsapi.zeoseven.com/442/main/result.css");
 @import url("https://fontsapi.zeoseven.com/8/main/result.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+@import url('https://rsms.me/inter/inter.css');
+/* 以防万一 */
 
 :root {
     --rate-module-info-icon-color: var(--basalt-undertone);

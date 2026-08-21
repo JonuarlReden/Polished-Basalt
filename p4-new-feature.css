@@ -6,6 +6,14 @@
 
 /* BUG修复与小修补 */
 
+:root {
+    --main-content-bottom-margin: var(--main-content-top-margin);
+}
+
+#np-editor-panel, #wd-editor-toolbar-panel {
+    flex-direction: column;
+}
+
 #content-wrap {
     overflow: hidden;
 }
@@ -259,12 +267,15 @@ div[class^="deletion"]::before {
 列表项美化
 */
 
-#page-content :is(ul:not([class]), ol:not([class])) li:not([class]) {
+#page-content :is(ul:not([class]), ol:not([class])) li:not([class]),
+#page-content dl:not([class]) :is(dt:not([class]), dd:not([class])) {
     margin: calc(var(--main-content-top-margin) - 1rem) auto calc(var(--main-content-bottom-margin) - 1rem);
 }
 
-#page-content :is(li)[class="none"] > li {
+#page-content :is(li)[class="none"] > li, 
+#page-content dl:not([class]) dd:not([class]) {
     margin-left: 0.15rem;
+    margin-inline-start: none;
 }
 
 #page-content ul[class="none"] li {
