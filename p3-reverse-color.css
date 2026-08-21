@@ -88,8 +88,9 @@ div:is([class$="_memo"], [class~="memo"]).reverse {
     --memo-color-reverse: var(--memo-color);
     --memo-logo-reverse: var(--memo-logo);
     --memo-logo: url(https://scpsandboxcn.wikidot.com/local--files/jr-reboot/SCP_Foundation_Edit_Reverse.svg);
+    --memo-color-mix: color-mix(in oklab, rgba(var(--memo-color-reverse)) 10%, rgba(var(--basalt-reverse-secondary-color)) 100%);
     border: solid 2px rgba(var(--memo-color), 1);
-    background: var(--memo-logo-reverse) color-mix(in oklab, rgba(var(--memo-color-reverse)) 10%, rgba(var(--basalt-reverse-secondary-color)) 100%);
+    background: var(--memo-logo-reverse) var(--memo-color-mix);
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
@@ -139,13 +140,11 @@ div:is([class^="temporal_"], [class~="temporal"]).reverse {
 
 div:is([class^="overwatch_"], [class~="overwatch"]).reverse {
     --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/O5_DARKLOGO.png);
-    background: var(--memo-logo-reverse);
     background-color: color-mix(in oklab, rgba(var(--memo-color-reverse)) 0%, rgba(var(--basalt-reverse-secondary-color)) 100%);
 }
 
 div:is([class^="miscomm_"], [class~="miscomm"]).reverse {
     --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/MISCOMM_DARKLOGO.png);
-    background-image: var(--memo-logo-reverse);
     background-color: color-mix(in oklab, rgba(var(--memo-color-reverse)) 80%, rgba(var(--basalt-reverse-primary-color)) 40%);
 }
 
@@ -164,10 +163,11 @@ div:is([class^="antimeme_"], [class~="antimeme"],
 }
 
 div:is([class^="admin_"], [class~="admin"]).reverse {
-    --memo-logo-reverse: url(https://scpsandboxcn.wikidot.com/local--files/jr-reboot/Administrator-JR-Speciallized-Light-Colored.svg);
-    --memo-alpha-reverse: 0.9;
-    --memo-logo-alpha-fix: 1;
-    --memo-color-reverse: 138, 65, 164;
+    --memo-logo-reverse: linear-gradient(var(--memo-color-mix) 0.7, var(--memo-color-mix) 0.7), url(https://scpsandboxcn.wikidot.com/local--files/jr-reboot/Administrator-JR-Speciallized-Light-Colored.svg);
+}
+
+div.reverse.memo {
+    --memo-logo-reverse: linear-gradient(var(--memo-color-mix) 0.7, var(--memo-color-mix) 0.7), url(https://scpsandboxcn.wikidot.com/local--files/jr-reboot/SCP_Foundation_Edit_Reverse.svg);
 }
 
 :is(.table1, .table2, .table3, .table4, .table5, .table6).reverse {
