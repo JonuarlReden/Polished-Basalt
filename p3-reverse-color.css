@@ -20,6 +20,8 @@
 
     --blockquote-background-reverse-color: var(--basalt-reverse-secondary-color);
     --blockquote-border-reverse-color: var(--general-reverse-border-color);
+
+    --basalt-outline-strength: 0.75;
 }
 
 :is(div.blockquote, blockquote).reverse {
@@ -27,7 +29,7 @@
     border: solid var(--blockquote-border-width) rgb(var(--blockquote-border-reverse-color));
     color: rgb(var(--basalt-reverse-main-text-color));
     overflow: auto;
-    outline: rgba(var(--blockquote-background-reverse-color), 0.75) solid 0.25rem;
+    outline: rgba(var(--blockquote-background-reverse-color), var(--basalt-outline-strength)) solid 0.25rem;
 }
 
 div.notation.reverse {
@@ -35,28 +37,28 @@ div.notation.reverse {
     border-left: solid 0.25rem rgb(var(--general-reverse-border-color));
     border-right: solid 0.25rem rgb(var(--general-reverse-border-color));
     color: rgb(var(--basalt-reverse-main-text-color));
-    outline: rgba(var(--basalt-reverse-secondary-color), 0.75) solid 0.25rem;
+    outline: rgba(var(--basalt-reverse-secondary-color), var(--basalt-outline-strength)) solid 0.25rem;
 }
 
 div.modal.reverse {
     background-color: rgb(var(--basalt-reverse-primary-color));
     border: solid 0.2rem rgb(var(--general-reverse-border-color));
     color: rgb(var(--basalt-reverse-main-text-color));
-    outline: rgb(var(--basalt-reverse-primary-color), 0.75) solid 0.25rem;
+    outline: rgb(var(--basalt-reverse-primary-color), var(--basalt-outline-strength)) solid 0.25rem;
 }
 
 div.smallmodal.reverse {
     background-color: rgb(var(--basalt-reverse-primary-color));
     border: solid 0.15rem rgb(var(--general-reverse-border-color));
     color: rgb(var(--basalt-reverse-main-text-color));
-    outline: rgba(var(--basalt-reverse-primary-color), 0.75) solid 0.25rem;
+    outline: rgba(var(--basalt-reverse-primary-color), var(--basalt-outline-strength)) solid 0.25rem;
 }
 
 div:is(.jotting, .transcript).reverse {
     background-color: rgb(var(--basalt-reverse-secondary-color));
     border: dashed 0.15rem rgb(var(--general-reverse-border-color));
     color: rgb(var(--basalt-reverse-main-text-color));
-    outline: rgba(var(--basalt-reverse-secondary-color), 0.75) solid 0.25rem;
+    outline: rgba(var(--basalt-reverse-secondary-color), var(--basalt-outline-strength)) solid 0.25rem;
 }
 
 div.papernote.reverse {
@@ -69,52 +71,52 @@ div.document.reverse, div.document.reverse::after, div.document.reverse::before 
     box-shadow: -6px -4px 0px 2px rgba(var(--basalt-reverse-bright-element-color), 0.35), 7px 11px 0px 5px rgba(var(--basalt-reverse-dark-element-color), 0.5);
 }
 
-div.document.reverse {
+div.darkdocument, div.document.reverse {
     background-color: rgb(var(--darkdocument-background-color));
     color: rgb(var(--basalt-reverse-main-text-color));
 }
 
-div:is(.document).reverse::before,
-div:is(.document).reverse::after {
+div:is(.document.reverse, .darkdocument)::before,
+div:is(.document.reverse, .darkdocument)::after {
     background-color: rgb(var(--darkdocument-background-color));
     opacity: 75%;
 }
 
-div[class$="_memo"].reverse{
+div:is([class$="_memo"], [class~="memo"]).reverse{
     background-color: rgba(var(--basalt-reverse-secondary-color), var(--memo-alpha));
     border: solid 2px rgba(var(--memo-color), 1);
 }
 
-div[class$="_memo"].reverse::before {
+div:is([class$="_memo"], [class~="memo"]).reverse::before {
     color: rgb(var(--memo-color));
 }
 
-div.raisa_memo.reverse {
+div:is([class^="raisa_"], [class~="raisa"]).reverse {
     --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/RAISA_DARKLOGO.png);
 }
 
-div.classification_memo.reverse {
+div:is([class^="classification_"], [class~="classification"]).reverse {
     --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/CLASSIFICATION_DARKLOGO.png);
 }
 
-div.ettra_memo.reverse {
+div:is([class^="etrra_"], [class~="ettra"]).reverse {
     --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/ETTRA_DARKLOGO.png);
 }
 
-div.ethics_memo.reverse {
+div:is([class^="ethics_"], [class~="ethics"]).reverse {
     --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/ETHICS_DARKLOGO.png);
 }
 
-div.temporal_memo.reverse {
+div:is([class^="temporal_"], [class~="temporal"]).reverse {
     --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/DELTA_T_DARKLOGO.png);
     --memo-color: 195, 195, 200;
 }
 
-div.overwatch_memo.reverse {
+div:is([class^="overwatch_"], [class~="overwatch"]).reverse {
     --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/O5_DARKLOGO.png);
 }
 
-div.miscomm_memo.reverse {
+div:is([class^="miscomm_"], [class~="miscomm"]).reverse {
     --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/MISCOMM_DARKLOGO.png);
 }
 
