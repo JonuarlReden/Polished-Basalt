@@ -1,0 +1,40 @@
+/*
+ * =====
+ * 玄武岩
+ * =====
+ */
+
+:root{
+    --basalt-alternate-color: 221, 119, 17;
+    --basalt-primary-color: 252, 252, 252;
+    --basalt-secondary-color: 240, 240, 244;
+    --basalt-tertiary-color: 229, 229, 238;
+    --basalt-main-text-color: 35, 35, 38;
+    --basalt-overtone: 10, 10, 11;
+    --basalt-undertone: var(--basalt-bright-element-color);
+
+    --general-border-color: 220, 220, 220;
+
+    --basalt-bright-element-color: 150, 24, 43;
+    --basalt-dark-element-color: 105, 17, 30;
+    --basalt-alternate-color: 221, 119, 17;
+ 
+    --basalt-UI-dark-palette: 50, 50, 51;
+
+    --basalt-polished-color: 193, 10, 51;
+
+    /* 反转配色 */
+
+    --basalt-reverse-overtone: 180, 180, 181;
+    --basalt-reverse-UI-dark-palette: 55, 55, 56;
+    --basalt-reverse-bright-element-color: 234, 46, 52;
+    --basalt-reverse-dark-element-color: 226, 60, 63;
+    --basalt-reverse-primary-color: 13, 13, 15;
+    --basalt-reverse-secondary-color: 72, 72, 75;
+    --basalt-reverse-tertiary-color: 44, 44, 45;
+    --basalt-reverse-main-text-color: 195, 195, 195;
+
+    --basalt-reverse-main-text-color-invert: 30, 30, 30;
+
+    --general-reverse-border-color: 165, 165, 165;
+}

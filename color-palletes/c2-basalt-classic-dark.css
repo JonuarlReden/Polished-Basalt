@@ -1,0 +1,22 @@
+/*
+ * =========
+ * 暗色玄武岩
+ * =========
+ */
+
+:root{
+    --basalt-bright-element-color: 234, 46, 52;
+    --basalt-dark-element-color: 226, 60, 63;
+
+    --basalt-reverse-overtone: 10, 10, 11;
+    --basalt-reverse-UI-dark-palette: 50, 50, 51;
+    --basalt-reverse-bright-element-color: 150, 24, 43;
+    --basalt-reverse-dark-element-color: 105, 17, 30;
+    --basalt-reverse-primary-color: 252, 252, 252;
+    --basalt-reverse-secondary-color: 240, 240, 244;
+    --basalt-reverse-tertiary-color: 229, 229, 238;
+    --basalt-reverse-main-text-color: 35, 35, 38;
+    --general-reverse-border-color: 220, 220, 220;
+
+    --basalt-outline-strength: 0.95;
+}

@@ -69,8 +69,9 @@
     --window-border-radius: 0;
 
     --basalt-polished-color: 0, 163, 255;
-    --mailinfo-color: var(--basalt-alternate-color);
     --basalt-focus-color: var(--basalt-polished-color);
+    
+    --mailinfo-color: var(--basalt-alternate-color);
 
     --serif-font: var(--serif-font-primary), serif;
     --serif-font-primary: Domine, "Noto Serif SC", "Noto Serif CJK SC";
