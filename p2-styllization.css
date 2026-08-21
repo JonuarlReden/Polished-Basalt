@@ -283,7 +283,7 @@ sup.footnoteref:hover {
 
 div.hovertip {
     border-radius: 0;
-    box-sizing: border-box;
+    box-sizing: content-box;
     background-color: rgb(var(--basalt-primary-color)) !important;
     border: solid 2px rgb(var(--basalt-tertiary-color)) !important;
     border-left: none !important;
