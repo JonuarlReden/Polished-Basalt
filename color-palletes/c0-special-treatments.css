@@ -1,0 +1,17 @@
+/* 不随主题变化而改变的部分特例 */
+
+div[class^="deletion"] {
+    border: solid 2px #f0943e;
+    color: #ffffff;
+}
+
+div[class^="deletion"]::before {
+    color: #ffffff;
+}
+
+div[class^="aiad"][class$="memo"] {
+    background: linear-gradient(rgba(var(--memo-color), var(--memo-alpha)), rgba(var(--memo-color), var(--memo-alpha))), var(--memo-logo) rgba(var(--memo-color), calc(1 - var(--memo-alpha)));
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}

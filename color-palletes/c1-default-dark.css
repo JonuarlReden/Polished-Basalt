@@ -37,24 +37,35 @@ div.darkdocument, div.document.reverse {
 
 div.darkdocument, div.darkdocument::after, div.darkdocument::before,
 div.document.reverse, div.document.reverse::after, div.document.reverse::before {
-    box-shadow: -6px -4px 0px 2px rgba(var(--basalt-reverse-bright-element-color), 0.35), 7px 11px 0px 5px rgba(var(--basalt-reverse-dark-element-color), 0.35);
+    box-shadow: -6px -4px 0px 2px rgba(var(--basalt-bright-element-color), 0.35), 7px 11px 0px 5px rgba(var(--basalt-dark-element-color), 0.35);
+}
+
+.bibitems::before, .footnotes-footer::before,
+.bibitems .title, .footnotes-footer .title {
+    background-color: rgb(var(--basalt-dark-element-color));
+}
+
+.polished-acs {
+    --five-color: 212, 28, 55;
+    --six-color: 103, 69, 237;
 }
 
 /* 暗色提示 */
 
 div:is([class$="_memo"], [class~="memo"]) {
+    --memo-color: var(--basalt-tertiary-color);
     background-color: color-mix(in oklab, rgba(var(--memo-color)) 10%, rgba(var(--basalt-secondary-color)) 100%);
     border: solid 2px rgba(var(--memo-color), 1);
 }
 
 div:is([class$="_memo"], [class~="memo"])::before {
-    color: rgb(var(--memo-color));
+    color: rgb(var(--basalt-reverse-tertiary-color));
 }
 
 div:is([class$="_memo"], [class~="memo"])::after {
     --memo-logo: url(https://scpsandboxcn.wikidot.com/local--files/jr-reboot/SCP_Foundation_Edit.svg);
     content: "";
-    background: var(--memo-logo-reverse);
+    background: var(--memo-logo);
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
@@ -65,41 +76,41 @@ div:is([class$="_memo"], [class~="memo"])::after {
     top: 0;
     left: 0;
     z-index: 0;
-    filter: none;
+    filter: invert(1);
     opacity: 0.1;
     pointer-events: none;
 }
 
 div:is([class^="raisa_"], [class~="raisa"]) {
-    --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/RAISA_DARKLOGO.png);
+    --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/RAISA_LIGHTLOGO.png);
 }
 
 div:is([class^="classification_"], [class~="classification"]) {
-    --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/CLASSIFICATION_DARKLOGO.png);
+    --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/CLASSIFICATION_LIGHTLOGO.png);
 }
 
 div:is([class^="etrra_"], [class~="ettra"]) {
-    --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/ETTRA_DARKLOGO.png);
+    --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/ETTRA_LIGHTLOGO.png);
 }
 
 div:is([class^="ethics_"], [class~="ethics"]) {
-    --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/ETHICS_DARKLOGO.png);
+    --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/ETHICS_LIGHTLOGO.png);
 }
 
 div:is([class^="temporal_"], [class~="temporal"]) {
-    --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/DELTA_T_DARKLOGO.png);
+    --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/DELTA_T_LIGHTLOGO.png);
 }
 
 div:is([class^="overwatch_"], [class~="overwatch"]) {
-    --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/O5_DARKLOGO.png);
+    --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/O5_LIGHTLOGO.png);
     background-color: color-mix(in oklab, rgba(var(--memo-color-reverse)) 0%, rgba(var(--basalt-reverse-secondary-color)) 100%);
 }
 
 div:is([class^="miscomm_"], [class~="miscomm"]) {
     --memo-alpha-reverse: 0;
-    --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/MISCOMM_DARKLOGO.png);
+    --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/MISCOMM_LIGHTLOGO.png);
     background-color: color-mix(in oklab, rgba(var(--memo-color-reverse)) 80%, rgba(var(--basalt-reverse-primary-color)) 40%);
-    color: rgb(var(--basalt-primary-color));
+    color: rgb(var(--basalt-main-text-color));
 }
 
 div:is([class^="raisa_"], [class~="raisa"],
@@ -109,7 +120,8 @@ div:is([class^="raisa_"], [class~="raisa"],
        [class^="temporal_"], [class~="temporal"],
        [class^="overwatch_"], [class~="overwatch"],
        [class^="miscomm_"], [class~="miscomm"]):after {
-    --memo-logo-reverse: none;
+    --memo-logo: none;
+    filter: none;
 }
 
 div:is([class^="antimeme_"], [class~="antimeme"],
@@ -125,7 +137,6 @@ div:is([class^="antimeme_"], [class~="antimeme"],
        [class^="unreal_"], [class~="unreal"],
        [class^="it_"], [class~="it"]):after {
     background-image: var(--memo-logo);
-    filter: invert(1);
 }
 
 div:is([class^="admin_"], [class~="admin"]):after {
@@ -144,38 +155,39 @@ div[class$="memo"].reverse {
     background-position: center center;
     background-repeat: no-repeat;
     border: solid 2px rgba(255, 255, 255, 0.1);
+    color: rgb(var(--basalt-tertiary-color));
 }
 
 /* 下面这些是用来重新定义已有的memo的 */
 
 div[class^="raisa"][class$="memo"].reverse {
-    --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/RAISA_LIGHTLOGO.png);
+    --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/RAISA_DARKLOGO.png);
 }
 
 div[class^="classification"][class$="memo"].reverse {
-    --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/CLASSIFICATION_LIGHTLOGO.png);
+    --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/CLASSIFICATION_DARKLOGO.png);
 }
 
 div[class^="ettra"][class$="memo"].reverse {
-    --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/ETTRA_LIGHTLOGO.png);
+    --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/ETTRA_DARKLOGO.png);
 }
 
 div[class^="ethics"][class$="memo"].reverse {
-    --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/ETHICS_LIGHTLOGO.png);
+    --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/ETHICS_DARKLOGO.png);
 }
 
 div[class^="temporal"][class$="memo"].reverse {
-    --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/DELTA_T_LIGHTLOGO.png);
+    --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/DELTA_T_DARKLOGO.png);
 }
 
 div[class^="overwatch"][class$="memo"].reverse {
-    --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/O5_LIGHTLOGO.png);
+    --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/O5_DARKLOGO.png);
     --memo-color: 227, 227, 227;
     --memo-alpha: 0;
 }
 
 div[class^="miscomm"][class$="memo"].reverse {
-    --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/MISCOMM_LIGHTLOGO.png);
+    --memo-logo: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/MISCOMM_DARKLOGO.png);
 }
 
 /* 上面这些是用来重新定义已有的memo的 */

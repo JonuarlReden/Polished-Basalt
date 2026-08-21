@@ -121,27 +121,27 @@ div:is([class$="_memo"], [class~="memo"]).reverse::after {
 }
 
 div:is([class^="raisa_"], [class~="raisa"]).reverse {
-    --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/RAISA_DARKLOGO.png);
+    --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/RAISA_LIGHTLOGO.png);
 }
 
 div:is([class^="classification_"], [class~="classification"]).reverse {
-    --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/CLASSIFICATION_DARKLOGO.png);
+    --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/CLASSIFICATION_LIGHTLOGO.png);
 }
 
 div:is([class^="etrra_"], [class~="ettra"]).reverse {
-    --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/ETTRA_DARKLOGO.png);
+    --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/ETTRA_LIGHTLOGO.png);
 }
 
 div:is([class^="ethics_"], [class~="ethics"]).reverse {
-    --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/ETHICS_DARKLOGO.png);
+    --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/ETHICS_LIGHTLOGO.png);
 }
 
 div:is([class^="temporal_"], [class~="temporal"]).reverse {
-    --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/DELTA_T_DARKLOGO.png);
+    --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/DELTA_T_LIGHTLOGO.png);
 }
 
 div:is([class^="overwatch_"], [class~="overwatch"]).reverse {
-    --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/O5_DARKLOGO.png);
+    --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/O5_LIGHTLOGO.png);
     background-color: color-mix(in oklab, rgba(var(--memo-color-reverse)) 0%, rgba(var(--basalt-reverse-secondary-color)) 100%);
 }
 
