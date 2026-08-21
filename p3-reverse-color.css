@@ -89,8 +89,9 @@ div:is([class$="_memo"], [class~="memo"]).reverse {
     --memo-logo-reverse: var(--memo-logo);
     --memo-logo: url(https://scpsandboxcn.wikidot.com/local--files/jr-reboot/SCP_Foundation_Edit_Reverse.svg);
     --memo-color-mix: color-mix(in oklab, rgba(var(--memo-color-reverse)) 10%, rgba(var(--basalt-reverse-secondary-color)) 100%);
+    --memo-alpha-reverse: 0.7;
     border: solid 2px rgba(var(--memo-color), 1);
-    background: var(--memo-logo-reverse) var(--memo-color-mix);
+    background: linear-gradient(var(--memo-color-mix) var(--memo-alpha-reverse), var(--memo-color-mix) var(--memo-alpha-reverse)), var(--memo-logo-reverse) var(--memo-color-mix);
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
@@ -103,7 +104,7 @@ div:is([class$="_memo"], [class~="memo"]).reverse::before {
 
 div:is([class$="_memo"], [class~="memo"]).reverse::after {
     content: "";
-    background: transparent;
+    background: none;
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
@@ -113,37 +114,44 @@ div:is([class$="_memo"], [class~="memo"]).reverse::after {
     height: 100%;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: 0;
     filter: invert(1);
     opacity: 0.1;
 }
 
 div:is([class^="raisa_"], [class~="raisa"]).reverse {
+    --memo-alpha-reverse: 0;
     --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/RAISA_DARKLOGO.png);
 }
 
 div:is([class^="classification_"], [class~="classification"]).reverse {
+    --memo-alpha-reverse: 0;
     --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/CLASSIFICATION_DARKLOGO.png);
 }
 
 div:is([class^="etrra_"], [class~="ettra"]).reverse {
+    --memo-alpha-reverse: 0;
     --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/ETTRA_DARKLOGO.png);
 }
 
 div:is([class^="ethics_"], [class~="ethics"]).reverse {
+    --memo-alpha-reverse: 0;
     --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/ETHICS_DARKLOGO.png);
 }
 
 div:is([class^="temporal_"], [class~="temporal"]).reverse {
+    --memo-alpha-reverse: 0;
     --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/DELTA_T_DARKLOGO.png);
 }
 
 div:is([class^="overwatch_"], [class~="overwatch"]).reverse {
+    --memo-alpha-reverse: 0;
     --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/O5_DARKLOGO.png);
     background-color: color-mix(in oklab, rgba(var(--memo-color-reverse)) 0%, rgba(var(--basalt-reverse-secondary-color)) 100%);
 }
 
 div:is([class^="miscomm_"], [class~="miscomm"]).reverse {
+    --memo-alpha-reverse: 0;
     --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/MISCOMM_DARKLOGO.png);
     background-color: color-mix(in oklab, rgba(var(--memo-color-reverse)) 80%, rgba(var(--basalt-reverse-primary-color)) 40%);
 }
@@ -152,6 +160,7 @@ div:is([class^="antimeme_"], [class~="antimeme"],
        [class^="surreal_"], [class~="surreal"],
        [class^="unreal_"], [class~="unreal"],
        [class^="it_"], [class~="it"]).reverse {
+    --memo-alpha-reverse: 0;
     background-image: none;
 }
 
@@ -163,11 +172,11 @@ div:is([class^="antimeme_"], [class~="antimeme"],
 }
 
 div:is([class^="admin_"], [class~="admin"]).reverse {
-    --memo-logo-reverse: linear-gradient(var(--memo-color-mix) 0.7, var(--memo-color-mix) 0.7), url(https://scpsandboxcn.wikidot.com/local--files/jr-reboot/Administrator-JR-Speciallized-Light-Colored.svg);
+    --memo-logo-reverse: url(https://scpsandboxcn.wikidot.com/local--files/jr-reboot/Administrator-JR-Speciallized-Light-Colored.svg);
 }
 
 div.reverse.memo {
-    --memo-logo-reverse: linear-gradient(var(--memo-color-mix) 0.7, var(--memo-color-mix) 0.7), url(https://scpsandboxcn.wikidot.com/local--files/jr-reboot/SCP_Foundation_Edit_Reverse.svg);
+    --memo-logo-reverse: url(https://scpsandboxcn.wikidot.com/local--files/jr-reboot/SCP_Foundation_Edit_Reverse.svg);
 }
 
 :is(.table1, .table2, .table3, .table4, .table5, .table6).reverse {

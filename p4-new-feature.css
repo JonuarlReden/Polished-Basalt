@@ -224,7 +224,7 @@ div[class^="it"][class$="memo"] {
 
 div[class^="aiad"][class$="memo"] {
     --memo-heading: "SCiPNET.aic公告";
-    --memo-logo: transparent;
+    --memo-logo: none;
     --memo-color: 15, 79, 72;
     --memo-alpha: 0;
     color: #75fdbd;
@@ -246,7 +246,7 @@ div[class^="aiad"][class$="memo"]::after {
     height: 100%;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: 0;
     filter: invert(1);
     opacity: 0.1;
 }
