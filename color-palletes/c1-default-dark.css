@@ -142,10 +142,10 @@ div:is([class^="admin_"], [class~="admin"]):after {
 
 /* 暗色提示 - 明暗反转 */
 
-div[class$="memo"].reverse {
+div:is([class$="_memo"], [class~="memo"]).reverse {
     --memo-logo-reverse: none;
     --memo-color-reverse: var(--basalt-reverse-tertiary-color);
-    --memo-alpha-reverse: 0.9;
+    --memo-alpha-reverse: 0.1;
     background: linear-gradient(rgba(var(--memo-color-reverse), var(--memo-alpha-reverse)), rgba(var(--memo-color-reverse), var(--memo-alpha-reverse))), var(--memo-logo-reverse) rgba(var(--memo-color-reverse), calc(1 - var(--memo-alpha-reverse)));
     background-size: contain;
     background-position: center center;
@@ -154,7 +154,7 @@ div[class$="memo"].reverse {
     color: rgb(var(--basalt-tertiary-color));
 }
 
-div[class$="memo"]::before {
+div:is([class$="_memo"], [class~="memo"]).reverse::before {
     color: rgb(var(--basalt-reverse-main-text-color));
 }
 
@@ -229,9 +229,9 @@ div:is([class^="antimeme_"], [class~="antimeme"],
        [class^="surreal_"], [class~="surreal"],
        [class^="unreal_"], [class~="unreal"],
        [class^="it_"], [class~="it"]).reverse {
-    background-image: var(--memo-logo);
+    background-image: linear-gradient(rgba(var(--memo-color-reverse), var(--memo-alpha-reverse)), rgba(var(--memo-color-reverse), var(--memo-alpha-reverse))), var(--memo-logo-reverse);
 }
 
 div:is([class^="admin_"], [class~="admin"]).reverse:after {
-    --memo-logo-reverse: var(--memo-logo);
+    --memo-logo-reverse: url(https://scpsandboxcn.wikidot.com/local--files/jr-reboot/Administrator-JR-Speciallized-Colored.svg);
 }
