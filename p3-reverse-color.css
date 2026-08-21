@@ -192,7 +192,7 @@ div:is([class^="it_"], [class~="it"]).reverse::before {
 
 div:is([class^="admin_"], [class~="admin"]).reverse {
     --memo-logo-reverse: url(https://scpsandboxcn.wikidot.com/local--files/jr-reboot/Administrator-JR-Speciallized-Light-Colored.svg);
-    --memo-alpha-reverse: 0.1;
+    --memo-alpha-reverse: 0.9;
     --memo-logo-alpha-fix: 1;
     --memo-color-reverse: 138, 65, 164;
 }
