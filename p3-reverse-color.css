@@ -14,7 +14,7 @@
     --basalt-reverse-tertiary-color: 44, 44, 45;
     --basalt-reverse-main-text-color: 195, 195, 195;
 
-    --basalt-reverse-main-text-color-invert: 60, 60, 60;
+    --basalt-reverse-main-text-color-invert: 30, 30, 30;
 
     --general-reverse-border-color: 165, 165, 165;
     --basalt-reverse-th-text-color: var(--basalt-reverse-main-text-color);
@@ -86,8 +86,9 @@ div:is(.document.reverse, .darkdocument)::after {
 
 div:is([class$="_memo"], [class~="memo"]).reverse {
     --memo-color-reverse: var(--basalt-reverse-secondary-color);
-    --memo-logo-reverse: url(https://scpsandboxcn.wikidot.com/local--files/jr-reboot/SCP_Foundation_Edit_Reverse.svg);
-    --memo-alpha-reverse: var(--memo-alpha);
+    --memo-logo-reverse: var(--memo-logo);
+    --memo-logo: url(https://scpsandboxcn.wikidot.com/local--files/jr-reboot/SCP_Foundation_Edit_Reverse.svg);
+    --memo-alpha-reverse: 0.7;
     --memo-color-light-reverse: var(--memo-color);
     --memo-logo-alpha-fix: 0;
     border: solid 2px rgba(var(--memo-color-light-reverse), 1);
