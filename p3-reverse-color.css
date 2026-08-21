@@ -88,12 +88,16 @@ div:is([class$="_memo"], [class~="memo"]).reverse {
     --memo-color-reverse: var(--memo-color);
     --memo-logo-reverse: var(--memo-logo);
     --memo-logo: url(https://scpsandboxcn.wikidot.com/local--files/jr-reboot/SCP_Foundation_Edit_Reverse.svg);
-    border: solid 2px rgba(var(--memo-color-light-reverse), 1);
+    border: solid 2px rgba(var(--memo-color), 1);
     background: var(--memo-logo-reverse) color-mix(in oklab, rgba(var(--memo-color-reverse)) 10%, rgba(var(--basalt-reverse-secondary-color)) 100%);
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
     color: rgb(var(--basalt-reverse-main-text-color));
+}
+
+div:is([class$="_memo"], [class~="memo"]).reverse::before {
+    color: rgb(var(--memo-color));
 }
 
 div:is([class^="raisa_"], [class~="raisa"]).reverse {
@@ -119,11 +123,17 @@ div:is([class^="temporal_"], [class~="temporal"]).reverse {
 div:is([class^="overwatch_"], [class~="overwatch"]).reverse {
     --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/O5_DARKLOGO.png);
     background: var(--memo-logo-reverse) color-mix(in oklab, rgba(var(--memo-color-reverse)) 0%, rgba(var(--basalt-reverse-secondary-color)) 100%);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 div:is([class^="miscomm_"], [class~="miscomm"]).reverse {
     --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/MISCOMM_DARKLOGO.png);
     background: var(--memo-logo-reverse) color-mix(in oklab, rgba(var(--memo-color-reverse)) 10%, rgba(var(--basalt-reverse-secondary-color)) 90%);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 div:is([class^="antimeme_"], [class~="antimeme"]).reverse {
