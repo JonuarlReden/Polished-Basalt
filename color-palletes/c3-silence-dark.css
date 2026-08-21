@@ -1,0 +1,37 @@
+/*
+ * ====
+ * 缄默
+ * ====
+ */
+
+:root{
+    --basalt-bright-element-color: 193, 193, 220;
+    --basalt-dark-element-color: 30, 30, 41;
+    --basalt-primary-color: 0, 0, 0;
+    --basalt-secondary-color: 45, 45, 49;
+    --basalt-tertiary-color: 77, 77, 83;
+    --basalt-main-text-color: 255, 255, 255;
+    --general-border-color: 180, 180, 180;
+
+    --basalt-overtone: 30, 30, 35;
+    --basalt-undertone: 160, 160, 166;
+    --basalt-alternate-color: 130, 130, 137;
+
+    --basalt-reverse-overtone: 30, 30, 35;
+    --basalt-reverse-UI-dark-palette: 30, 30, 30;
+    --basalt-reverse-bright-element-color: 138, 138, 168;
+    --basalt-reverse-dark-element-color: 54, 54, 73;
+    --basalt-reverse-primary-color: 255, 255, 255;
+    --basalt-reverse-secondary-color: 227, 227, 232;
+    --basalt-reverse-tertiary-color: 187, 186, 201;
+    --basalt-reverse-main-text-color: 0, 0, 0;
+    --general-reverse-border-color: 195, 195, 200;
+
+    --basalt-outline-strength: 1;
+
+    --header-pattern: url(data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(0.3) rotate(30)'><rect x='0' y='0' width='100%' height='100%' fill='rgba(45, 45, 49, 0.7)'/><path d='M0 10h20z' stroke-width='5' stroke='rgba(227, 227, 232, 0.3)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>);
+}
+
+#header {
+    background: linear-gradient(90deg, rgba(var(--header-background-color), 0.9) 0%, rgba(var(--header-background-color), 0.7) 75%, rgba(var(--header-background-color), 0.5) 100%), var(--header-pattern);
+}
