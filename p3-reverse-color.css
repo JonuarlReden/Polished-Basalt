@@ -85,8 +85,8 @@ div:is(.document.reverse, .darkdocument)::after {
 }
 
 div:is([class$="_memo"], [class~="memo"]).reverse {
-    --memo-color-reverse: var(--memo-color);
-    --memo-logo-reverse: var(--memo-logo);
+    --memo-color-reverse: var(--basalt-reverse-secondary-color);
+    --memo-logo-reverse: url(https://scpsandboxcn.wikidot.com/local--files/jr-reboot/SCP_Foundation_Edit_Reverse.svg);
     --memo-alpha-reverse: var(--memo-alpha);
     --memo-color-light-reverse: var(--memo-color);
     --memo-logo-alpha-fix: 0;
