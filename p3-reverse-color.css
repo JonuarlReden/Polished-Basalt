@@ -83,8 +83,13 @@ div:is(.document.reverse, .darkdocument)::after {
 }
 
 div:is([class$="_memo"], [class~="memo"]).reverse {
-    border: solid 2px rgba(var(--memo-color), 1);
-    background: linear-gradient(rgba(var(--memo-color), var(--memo-alpha-reverse)), rgba(var(--memo-color), var(--memo-alpha-reverse))), var(--memo-logo-reverse) rgba(var(--basalt-reverse-secondary-color), calc(1 - var(--memo-alpha-reverse)));
+    --memo-color-reverse: var(--memo-color);
+    --memo-logo-reverse: var(--memo-logo);
+    --memo-alpha-reverse: var(--memo-alpha);
+    --memo-color-light-reverse: var(--memo-color);
+    --memo-logo-alpha-fix: 0;
+    border: solid 2px rgba(var(--memo-color-light-reverse), 1);
+    background: linear-gradient(rgba(var(--memo-color-reverse), var(--memo-alpha-reverse)), rgba(var(--memo-color-reverse), var(--memo-alpha-reverse))), var(--memo-logo-reverse) rgba(var(--basalt-reverse-tertiary-color), calc(1 - var(--memo-alpha-reverse) + var(--memo-logo-alpha-fix)));
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
@@ -92,7 +97,8 @@ div:is([class$="_memo"], [class~="memo"]).reverse {
 }
 
 div:is([class$="_memo"], [class~="memo"]).reverse::before {
-    color: rgb(var(--memo-color));
+    --memo-color-light-reverse: var(--memo-color);
+    color: rgb(var(--memo-color-light-reverse));
 }
 
 div:is([class^="raisa_"], [class~="raisa"]).reverse {
@@ -107,7 +113,8 @@ div:is([class^="classification_"], [class~="classification"]).reverse {
 
 div:is([class^="etrra_"], [class~="ettra"]).reverse {
     --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/ETTRA_DARKLOGO.png);
-    --memo-alpha-reverse: 0.1;
+    --memo-alpha-reverse: 0.05;
+    --memo-logo-alpha-fix: 0.5;
 }
 
 div:is([class^="ethics_"], [class~="ethics"]).reverse {
@@ -117,17 +124,43 @@ div:is([class^="ethics_"], [class~="ethics"]).reverse {
 
 div:is([class^="temporal_"], [class~="temporal"]).reverse {
     --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/DELTA_T_DARKLOGO.png);
-    --memo-alpha-reverse: 0.1;
+    --memo-alpha-reverse: 0.05;
 }
 
 div:is([class^="overwatch_"], [class~="overwatch"]).reverse {
     --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/O5_DARKLOGO.png);
-    --memo-alpha-reverse: 0.1;
+    --memo-alpha-reverse: 0;
+    --memo-logo-alpha-fix: -0.1;
 }
 
 div:is([class^="miscomm_"], [class~="miscomm"]).reverse {
     --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/MISCOMM_DARKLOGO.png);
     --memo-alpha-reverse: 0.1;
+    --memo-logo-alpha-fix: -0.3;
+}
+
+div:is([class^="antimeme_"], [class~="antimeme"]).reverse {
+    --memo-color-reverse: 178, 175, 162;
+    --memo-color-light-reverse: 67, 64, 49;
+    --memo-alpha-reverse: 0.7;
+    color: rgb(var(--basalt-main-text-color));
+    filter: invert(1);
+}
+
+div:is([class^="antimeme_"], [class~="antimeme"]).reverse::before {
+    --memo-color-light-reverse: 67, 64, 49;
+}
+
+div:is([class^="surreal_"], [class~="surreal"]).reverse {
+    --memo-color-reverse: 199, 180, 182;
+    --memo-color-light-reverse: 59, 22, 26;
+    --memo-alpha-reverse: 0.7;
+    color: rgb(var(--basalt-main-text-color));
+    filter: invert(1);
+}
+
+div:is([class^="surreal_"], [class~="surreal"]).reverse::before {
+    --memo-color-light-reverse: 59, 22, 26;
 }
 
 :is(.table1, .table2, .table3, .table4, .table5, .table6).reverse {
