@@ -149,6 +149,7 @@ div:is([class^="miscomm_"], [class~="miscomm"]).reverse {
     --memo-alpha-reverse: 0;
     --memo-logo-reverse: url(https://scp-wiki.wikidot.com/local--files/theme:basalt/MISCOMM_DARKLOGO.png);
     background-color: color-mix(in oklab, rgba(var(--memo-color-reverse)) 80%, rgba(var(--basalt-reverse-primary-color)) 40%);
+    color: rgb(var(--basalt-primary-color));
 }
 
 div:is([class^="raisa_"], [class~="raisa"],
@@ -173,12 +174,12 @@ div:is([class^="antimeme_"], [class~="antimeme"],
        [class^="surreal_"], [class~="surreal"],
        [class^="unreal_"], [class~="unreal"],
        [class^="it_"], [class~="it"]).reverse:after {
-    background-image: var(--memo-logo-reverse);
+    background-image: var(--memo-logo);
     filter: invert(1);
 }
 
 div:is([class^="admin_"], [class~="admin"]).reverse:after {
-    background-image: var(--memo-logo-reverse);
+    --memo-logo-reverse: url(https://scpsandboxcn.wikidot.com/local--files/jr-reboot/Administrator-JR-Speciallized-Light-Colored.svg);
     filter: none;
 }
 

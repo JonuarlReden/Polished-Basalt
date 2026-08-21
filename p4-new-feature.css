@@ -134,6 +134,12 @@ div[class$="memo"]::before {
     padding-top: 0.5em;
 }
 
+div[class$="memo"]::before,
+div[class$="memo"] > p {
+    z-index: 1;
+    position: relative;
+}
+
 /* 下面这些是用来重新定义已有的memo的 */
 
 div[class^="raisa"][class$="memo"] {
