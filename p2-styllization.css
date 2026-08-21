@@ -375,9 +375,14 @@ div.hovertip div[class*="-footer"] {
     bottom: var(--posY);
   }
 
+  .fncon, 
+  .fnnum:hover + .fncon, .fncon:is(:hover,:focus-within) {
+    bottom: var(--posY);
+  }
+
   :root {
     --posX: 12vw;
-    --posY: 12vh;
+    --posY: 4vh;
   }
 }
 
