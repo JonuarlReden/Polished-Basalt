@@ -24,11 +24,11 @@
 /* div视觉调整 */
 
 :is(div.blockquote, blockquote).reverse {
-    outline: rgba(var(--blockquote-background-reverse-color), var(--blockquote-outline-strength)) solid 0.25rem;
+    outline: rgba(var(--blockquote-background-reverse-color), var(--basalt-outline-strength)) solid 0.25rem;
 }
 
 div:is(.notation, .jotting, .transcript, .modal, .smallmodal).reverse {
-    outline: rgba(var(--basalt-reverse-primary-color), var(--blockquote-outline-strength)) solid 0.15rem;
+    outline: rgba(var(--basalt-reverse-primary-color), var(--basalt-outline-strength)) solid 0.15rem;
 }
 
 div.darkdocument, div.document.reverse {
