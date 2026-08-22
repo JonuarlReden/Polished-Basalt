@@ -5,7 +5,7 @@
  */
 
 :root{
-    --basalt-bright-element-color: 193, 193, 220;
+    --basalt-bright-element-color: 193, 193, 200;
     --basalt-dark-element-color: 30, 30, 41;
     --basalt-primary-color: 0, 0, 0;
     --basalt-secondary-color: 45, 45, 49;
@@ -19,6 +19,8 @@
     --basalt-undertone: 160, 160, 166;
     --basalt-alternate-color: 130, 130, 137;
 
+    /* 反转配色 */
+
     --basalt-reverse-overtone: 30, 30, 35;
     --basalt-reverse-UI-dark-palette: 30, 30, 30;
     --basalt-reverse-bright-element-color: 138, 138, 168;
@@ -29,6 +31,8 @@
     --basalt-reverse-main-text-color: 0, 0, 0;
     --general-reverse-border-color: 195, 195, 200;
 
+    /* 杂项设置 */
+
     --basalt-outline-strength: 1;
 
     --header-pattern: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(0.3) rotate(30)'><rect x='0' y='0' width='100%' height='100%' fill='rgba(45, 45, 49, 0.7)'/><path d='M0 10h20z' stroke-width='5' stroke='rgba(227, 227, 232, 0.3)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
@@ -36,4 +40,26 @@
 
 #header {
     background: linear-gradient(90deg, rgba(var(--header-background-color), 0.9) 0%, rgba(var(--header-background-color), 0.7) 75%, rgba(var(--header-background-color), 0.5) 100%), var(--header-pattern);
+}
+
+#page-content div.floatbox.reverse {
+    box-shadow: -6px 6px rgba(var(--basalt-bright-element-color), 0.75);
+}
+
+.floatbox.right.reverse {
+    box-shadow: 6px 6px rgba(var(--basalt-bright-element-color), 0.75) !important;
+}
+
+div.document, div.document::after, div.document::before {
+    box-shadow: -6px -4px 0px 2px rgba(var(--basalt-polished-color), 0.5), 7px 11px 0px 5px rgba(var(--basalt-bright-element-color), 0.3);
+}
+
+div.darkdocument, div.darkdocument::after, div.darkdocument::before,
+div.document.reverse, div.document.reverse::after, div.document.reverse::before {
+    box-shadow: -6px -4px 0px 2px rgba(var(--basalt-bright-element-color), 0.35), 7px 11px 0px 5px rgba(var(--basalt-undertone), 0.35);
+}
+
+.bibitems::before, .footnotes-footer::before,
+.bibitems .title, .footnotes-footer .title {
+    background-color: rgb(var(--basalt-UI-dark-palette));
 }
