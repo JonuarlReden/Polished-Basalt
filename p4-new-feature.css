@@ -15,7 +15,7 @@
 }
 
 #content-wrap {
-    overflow: hidden;
+    overflow: clip;
 }
 
 #top-bar div[class*=top-bar]>ul>li>a {
