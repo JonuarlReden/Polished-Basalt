@@ -90,11 +90,13 @@ div#page-content div#u-adult-warning > div#u-adult-header::before {
 }
 
 @media only screen and (max-width: 1024px) {
-    #page-content div#u-adult-warning > div#u-adult-header {
+    #page-content div#u-adult-warning > div#u-adult-header,
+    div#page-content div#u-component-top-box > div#u-component-header {
         flex-direction: column;
     }
 
-    div#page-content div#u-adult-warning > div#u-adult-header::before {
+    div#page-content div#u-adult-warning > div#u-adult-header::before,
+    div#page-content div#u-component-top-box > div#u-component-header::before {
         margin-right: 0;
     }
 }
