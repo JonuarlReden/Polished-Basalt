@@ -570,3 +570,13 @@ div#page-content div#u-adult-warning > div#u-adult-header::before {
     color: white;
     font-weight: bold;
 }
+
+@media only screen and (max-width: 1024px) {
+    #page-content div#u-adult-warning > div#u-adult-header {
+        flex-direction: column;
+    }
+
+    div#page-content div#u-adult-warning > div#u-adult-header::before {
+        margin-right: 0;
+    }
+}
