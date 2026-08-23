@@ -31,6 +31,7 @@ div#u-component-header::before {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 div#page-content div#u-component-top-box + hr {
