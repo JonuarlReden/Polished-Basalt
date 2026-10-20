@@ -346,7 +346,7 @@ div[class^="deletion"]::before {
     text-decoration: none;
 }
 
-:is(.collapsible-block-unfolded, .colmod-block li) {
+:is(.collapsible-block-unfolded, .colmod-block > li) {
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -447,7 +447,7 @@ div[class^="deletion"]::before {
 }
 
 div.block-central,
-div.block-central :is(.collapsible-block-unfolded, .colmod-block li) {
+div.block-central :is(.collapsible-block-unfolded, .colmod-block > li) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -455,7 +455,7 @@ div.block-central :is(.collapsible-block-unfolded, .colmod-block li) {
 }
 
 div.block-left,
-div.block-left :is(.collapsible-block-unfolded, .colmod-block li) {
+div.block-left :is(.collapsible-block-unfolded, .colmod-block > li) {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -463,7 +463,7 @@ div.block-left :is(.collapsible-block-unfolded, .colmod-block li) {
 }
 
 div.block-right,
-div.block-right :is(.collapsible-block-unfolded, .colmod-block li) {
+div.block-right :is(.collapsible-block-unfolded, .colmod-block > li) {
     display: flex;
     flex-direction: column;
     align-items: end;
