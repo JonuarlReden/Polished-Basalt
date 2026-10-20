@@ -7,6 +7,7 @@
 :root{
     --basalt-reverse-overtone: 180, 180, 181;
     --basalt-reverse-UI-dark-palette: 55, 55, 56;
+    --basalt-reverse-brighter-element-color: 147, 161, 236;
     --basalt-reverse-bright-element-color: 17, 48, 167;
     --basalt-reverse-dark-element-color: 16, 20, 112;
     --basalt-reverse-primary-color: 13, 13, 15;
@@ -24,6 +25,17 @@
     --blockquote-border-reverse-color: var(--general-reverse-border-color);
 
     --basalt-outline-strength: 0.75;
+
+    --link-color-reverse: var(--basalt-polished-color);
+    --link-visited-color-reverse: var(--basalt-reverse-brighter-element-color);
+}
+
+.reverse a:any-link {
+    color: rgb(var(--link-color-reverse));
+}
+
+.reverse a:visited {
+    color: rgb(var(--link-visited-color-reverse));
 }
 
 :is(div.blockquote, blockquote).reverse {
