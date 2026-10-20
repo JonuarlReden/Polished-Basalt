@@ -349,6 +349,7 @@ div[class^="deletion"]::before {
 :is(.collapsible-block-unfolded, .colmod-block > li) {
     display: flex;
     width: 100%;
+    align-items: center;
     flex-direction: column;
 }
 
@@ -450,7 +451,6 @@ div.block-central,
 div.block-central :is(.collapsible-block-unfolded, .colmod-block > li) {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
 }
 
@@ -458,7 +458,6 @@ div.block-left,
 div.block-left :is(.collapsible-block-unfolded, .colmod-block > li) {
     display: flex;
     flex-direction: column;
-    align-items: start;
     justify-content: start;
 }
 
@@ -466,7 +465,6 @@ div.block-right,
 div.block-right :is(.collapsible-block-unfolded, .colmod-block > li) {
     display: flex;
     flex-direction: column;
-    align-items: end;
     justify-content: end;
 }
 
