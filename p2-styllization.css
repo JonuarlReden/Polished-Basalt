@@ -176,6 +176,7 @@ form#edit-page-form table.edit-page-bottomtable {
     --basalt-keyboard-shadow: rgb(var(--general-border-color));
     background-color: var(--basalt-keyboard-background);
     margin: 0 .25em;
+    padding: 0 .25em;
     border-radius: 0;
     box-shadow: 0 .125em 0 .15em var(--basalt-keyboard-shadow);
     font-family: var(--mono-font);
