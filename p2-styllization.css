@@ -109,7 +109,7 @@ form#edit-page-form table.edit-page-bottomtable {
 }
 
 .yui-navset.yui-navset-top .yui-content {
-    background-color: rgba(var(--basalt-secondary-color), 0.8);
+    background-color: rgba(var(--basalt-secondary-color), 0.5);
 }
 
 .yui-navset.yui-navset-top .yui-content,
