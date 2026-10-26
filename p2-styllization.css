@@ -169,7 +169,41 @@ form#edit-page-form table.edit-page-bottomtable {
     margin-right: clamp(calc(var(--main-content-width) * min(var(--floatbox-location-adjust) / -4.5, 0.25)), calc((87.5vw - 95%) / -2), 0rem);
 }
 
-/* 视觉效果调整                         */
+/* 各span类 */
+
+.keycap {
+    --basalt-keyboard-background: rgb(var(--basalt-secondary-color));
+    --basalt-keyboard-shadow: rgb(var(--general-border-color));
+    background-color: var(--basalt-keyboard-background);
+    margin: 0 .25em;
+    border-radius: 0;
+    box-shadow: 0 .125em 0 .15em var(--basalt-keyboard-shadow);
+    font-family: var(--mono-font);
+    display: inline-block;
+}
+
+.keycap .special {
+    --basalt-keyboard-background: rgb(var(--basalt-alternate-color));
+    --basalt-keyboard-background: color-mix(in oklab, rgb(var(--basalt-overtone)) 25%, var(--basalt-keyboard-background) 75%);
+    color: rgb(var(--basalt-primary-color));
+}
+
+.keycap .system {
+    --basalt-keyboard-background: rgb(var(--basalt-alternate-color));
+    --basalt-keyboard-background: color-mix(in oklab, rgb(var(--basalt-overtone)) 25%, rgb(var(--basalt-polished-color)) 75%);
+    color: rgb(var(--basalt-primary-color));
+}
+
+.ruby, ruby {
+    line-height: 1.55;
+    vertical-align: bottom;
+}
+
+.rt, rt {
+    line-height: .5;
+}
+
+/* 视觉效果调整                             */
 /* 《粗边框+窄边距+大投影的使用有点何意味》 */
 
 #page-content div.floatbox {
