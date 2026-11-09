@@ -187,6 +187,9 @@ div[id*=page-options-bottom]>a {
 .bibitems .title, .footnotes-footer .title {
     background-color: rgb(var(--basalt-bright-element-color));
     box-shadow: 4px 0 rgba(var(--basalt-polished-color), 0.75);
+}
+
+.bibitems::before, .footnotes-footer::before {
     width: .5rem;
 }
 
