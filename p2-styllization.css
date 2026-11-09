@@ -69,14 +69,22 @@ div.page-rate-widget-box span.btn>a {
     bottom: 0 !important;
 }
 
+#main-content .page-tags span::before {
+    font-size: 0.95rem;
+}
+
 #main-content > .page-tags > span a:is(:hover,:focus) {
     box-shadow: inset 0px 0px rgb(var(--basalt-polished-color)), 0 0 0 .25rem rgb(var(--basalt-focus-color));
+    clip-path: polygon(calc(0% - var(--basalt-tag-hover-outline)) calc(0% - var(--basalt-tag-hover-outline)), calc(100% - 0.5rem + var(--basalt-tag-hover-outline)) calc(0% - var(--basalt-tag-hover-outline)), calc(100% + var(--basalt-tag-hover-outline)) calc(0.5rem - var(--basalt-tag-hover-outline)), calc(100% + var(--basalt-tag-hover-outline)) calc(100% + var(--basalt-tag-hover-outline)), calc(0.5rem - var(--basalt-tag-hover-outline)) calc(100% + var(--basalt-tag-hover-outline)), calc(0% - var(--basalt-tag-hover-outline)) calc(100% - 0.5rem + var(--basalt-tag-hover-outline)));
 }
 
 #main-content > .page-tags > span a {
+    --basalt-tag-hover-outline: 0.15rem;
+    font-size: 0.875rem;
     box-shadow: inset -2px -4px rgb(var(--basalt-polished-color)), 0 0 0 0 rgb(var(--basalt-focus-color));
     border-radius: 0;
     clip-path: polygon(0% 0%, calc(100% - 0.5rem) 0%, 100% 0.5rem, 100% 100%, 0.5rem 100%, 0% calc(100% - 0.5rem));
+    padding: .4em .675em;
 }
 
 form#edit-page-form table.edit-page-bottomtable {
@@ -97,7 +105,34 @@ form#edit-page-form table.edit-page-bottomtable {
     box-shadow: 0.25rem 0.25rem rgba(var(--basalt-bright-element-color), 0.5);
 }
 
+div[id*=page-options-bottom]>a:is(:hover,:focus) {
+    background: rgba(var(--basalt-tertiary-color), 0.3);
+}
+
+div[id*=page-options-bottom]>a {
+    line-height: normal;
+}
+
 /* 各div类 */
+
+#page-title, .meta-title {
+    border-bottom: none;
+    color: color-mix(in oklab, rgb(var(--basalt-main-text-color)) 45%, rgb(var(--basalt-polished-color)) 55%);
+    display: flex;
+    align-items: center;
+}
+
+#page-title::before, .meta-title::before {
+    content: "";
+    display: inline-block;
+    width: calc(1em * 2 / sqrt(3));
+    height: 1em;
+    margin: 0em 0.35em 0.2em 0em;
+    background-color: rgba(var(--basalt-polished-color), 0.8);
+    clip-path: polygon(calc(100% / 4) 0, 0 50%, calc(100% / 4) 100%, calc(100% * 3 / 4) 100%, 100% 50%, calc(100% * 3 / 4) 0);
+    box-shadow: inset -0.25em -0.25em 0.5em 0.1em rgba(var(--basalt-bright-element-color), 0.5);
+    vertical-align: bottom;
+}
 
 .yui-navset.yui-navset-top>ul.yui-nav {
     box-shadow: 0 0.55rem rgba(var(--basalt-tertiary-color), 0.65);
@@ -152,10 +187,11 @@ form#edit-page-form table.edit-page-bottomtable {
 .bibitems .title, .footnotes-footer .title {
     background-color: rgb(var(--basalt-bright-element-color));
     box-shadow: 4px 0 rgba(var(--basalt-polished-color), 0.75);
+    width: .5rem;
 }
 
 .bibitems .title, .footnotes-footer .title {
-    box-shadow: 9.5px 2px rgba(var(--basalt-polished-color), 0.75);
+    box-shadow: calc(.35rem + 4px) 6px rgba(var(--basalt-polished-color), 0.75);
 }
 
 #page-content div.floatbox {
@@ -211,6 +247,30 @@ form#edit-page-form table.edit-page-bottomtable {
     margin-bottom: 0.75rem;
 }
 
+h2 {
+    font-size: 1.8em;
+}
+
+h3 {
+    font-size: 1.65em;
+}
+
+h4 {
+    font-size: 1.5em;
+}
+
+h5 {
+    font-size: 1.35em;
+}
+
+h6 {
+    font-size: 1.2em;
+}
+
+h5, h6 {
+    font-weight: 550;
+}
+
 div:is(.document, .darkdocument) {
     margin-inline: 1rem;
 }
@@ -223,9 +283,13 @@ div:is(.document, .darkdocument) {
     text-indent: -1.5ch;
 }
 
+.footnotes-footer .title, .bibitems .title {
+    padding: 0.15rem 0.75rem;
+}
+
 .footnotes-footer .title::before,
 .bibitems .title::before {
-    padding: .25em .5em;
+    font-size: calc(var(--true-font-size) * 1.15);
 }
 
 .bibitems, .footnotes-footer {
@@ -272,6 +336,7 @@ div:is(.document, .darkdocument) {
 .fncon {
     position: fixed;
     display: block;
+    font-size: 0.9rem;
     right: var(--posX);
     bottom: var(--posX);
 }
@@ -363,7 +428,7 @@ div.hovertip div.content div[class] div[class*="-heading"] {
     inset-block-start: -1.5em;
     inset-inline-start: 0;
     margin-block-end: -1em;
-    padding: 0 0.5em;
+    padding: 0.18rem 0.32em 0.08rem;
     position: absolute;
     width: max-content;
     top: -1.25rem;
@@ -390,6 +455,7 @@ div.hovertip div.content div[class] div[class="r-heading"],
 div.hovertip div.content div[class] div[class*="-content"] {
     margin: 0;
     padding: 0;
+    font-size: 0.9rem;
 }
 
 div.hovertip div[class*="-footer"] {

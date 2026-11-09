@@ -494,12 +494,10 @@ a.btn.btn-default.button.button-close-message::before {
 
 .footnotes-footer .title::before {
     content: var(--LOC-footnotes);
-    font-size: var(--p-font-size-medium);
 }
 
 .bibitems .title::before {
     content: var(--LOC-bibliography);
-    font-size: var(--p-font-size-medium);
 }
 
 /* More Option */
