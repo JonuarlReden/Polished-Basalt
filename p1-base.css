@@ -79,4 +79,9 @@
     --UI-font-primary: "Sofia Sans", "Empo Sans 1";
 
     --header-gradient-bar: linear-gradient(120deg, rgb(var(--basalt-bright-element-color)), rgb(var(--basalt-polished-color)));
+
+    /* 根样式 */
+    text-autospace: normal;
+    scroll-behavior: smooth;
+    overscroll-behavior: none;
 }
